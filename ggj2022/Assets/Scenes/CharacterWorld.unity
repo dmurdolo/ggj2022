@@ -171,6 +171,8 @@ MonoBehaviour:
   headLineMultiplier: 0.5
   darkLineMultiplier: 0.5
   lightLineMultiplier: 0.5
+  m_lightLevel: 1
+  m_darkLevel: 1
 --- !u!4 &143896490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8539929905765746762, guid: a6924e6164248144e8d9fd827cc2d9a7, type: 3}
