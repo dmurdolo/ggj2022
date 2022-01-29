@@ -1201,6 +1201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2098656347}
   - component: {fileID: 2098656346}
+  - component: {fileID: 2098656348}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1235,6 +1236,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098656348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098656345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265eaf9fedb29164d8cf3e3323fc0e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2130223164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7766939437864889276, guid: bb0aba3edcc2376439ca6273cb88cf53, type: 3}
@@ -1254,6 +1267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxIterations: 10
   Iteration: 0
+  DistanceThreshold: 2
+  Origin: {x: 0, y: 0, z: 0}
 --- !u!114 &2130223166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,6 +1357,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30487171746449624, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454915717797467328, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502955827312768617, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5193548638134652630, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
       propertyPath: m_Name
       value: Level01
@@ -1388,6 +1415,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5193548638134652631, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068037318749728706, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046596285904221573, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8865404558208697391, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199573879752211473, guid: e00602a654d6deb49b5c8e67154a78ed, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

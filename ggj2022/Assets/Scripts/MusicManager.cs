@@ -19,7 +19,7 @@ public class MusicManager : MonoBehaviour
 
         for (int i = 0; i < _audioSources.Length; i++)
         {
-            Debug.Log(_audioSources[i].clip.length);
+            //Debug.Log(_audioSources[i].clip.length);
         }
     }
 
