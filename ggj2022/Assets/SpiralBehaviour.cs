@@ -35,6 +35,5 @@ public class SpiralBehaviour : MonoBehaviour
 
     void Update()
     {
-        
     }
 }
