@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
-  m_Name: Intro
+  m_Name: CubeEnd
   m_EditorClassIdentifier: 
   Paths:
   - Name: 
@@ -44,37 +44,9 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
+  Config: 'Thanks for talking to me again.
 
-    I can''t remember
+    Sorry I don''t have anything else
+    to say.
 
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    {open}
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s
-    all right.
-
-    Thanks for confirming that...}
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks
-    for letting me know.
-
-    I''ll keep that in mind.'
+'
