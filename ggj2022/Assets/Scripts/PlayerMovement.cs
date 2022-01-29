@@ -14,6 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext value)
     {
         moveVal = value.ReadValue<Vector2>();
-        _player.transform.Translate(new Vector3(moveVal.x, 0, moveVal.y) * moveSpeed * Time.deltaTime);
+        _player.transform.Translate(new Vector3(Mathf.Ceil(moveVal.x), 0, Mathf.Ceil(moveVal.y)) * moveSpeed);
     }
 }
