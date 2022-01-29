@@ -13,6 +13,8 @@ public class LevelManager : MonoBehaviour
 
     private void InitLevels()
     {
+        _levels = new List<Level>();
+        
         Level level1 = new Level(20, 20);
         _levels.Add(level1);
     }
