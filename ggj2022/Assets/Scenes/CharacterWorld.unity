@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &44093321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44093322}
+  - component: {fileID: 44093323}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44093322
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44093321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23162821, y: 0.2647298, z: 0.28369582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44093323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44093321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2878c41ec7900194282d9dae14c70c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 275575592}
+  headLineMultiplier: 0.5
+  darkLineMultiplier: 0.5
+  lightLineMultiplier: 0.5
+  m_lightLevel: 1
+  m_darkLevel: 1
 --- !u!4 &143896490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8539929905765746762, guid: a6924e6164248144e8d9fd827cc2d9a7, type: 3}
@@ -1461,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678114269813365908, guid: fbdfd5515967b6348931d002eca6a646, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.998
+      value: -1.175
       objectReference: {fileID: 0}
     - target: {fileID: 2678114269813365908, guid: fbdfd5515967b6348931d002eca6a646, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1629,6 +1679,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 275575592}
+    - target: {fileID: 4193906454083449574, guid: ef2454646573a5447ae9b1ffd41190d6, type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4193906454083449575, guid: ef2454646573a5447ae9b1ffd41190d6, type: 3}
       propertyPath: m_UIInputModule
       value: 
