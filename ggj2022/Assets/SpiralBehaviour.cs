@@ -10,44 +10,65 @@ public class SpiralBehaviour : MonoBehaviour
     public Vector3 Origin;
 
     private GameObject _player;
-    private bool _isInitiated = false;
     private bool _isAnimating = false;
-
+    private bool _isAnimatingIn = true;     // State 1 - Spiral closed
+    private bool _isAnimatingOut = false;   // State 2 - Spiral opened
 
     void Start()
     {
         _player = GameObject.Find("Player");
+        
+        if (this.Iteration == 0)
+        {
+            InitAnimation();
+        }
     }
 
     void Update()
     {
-        // Only the root
-        if (this.Iteration == 0)
+        if (this.Iteration != 0)
         {
+            return;
+        }
+
+        // Only the root object
+
+        // Check if finished animating
+        bool isFinishedAnimating = true;
+        if (_isAnimating)
+        {
+            foreach(Transform child in transform)
+            {
+                SpiralBlock spiralBlock = child.GetComponent<SpiralBlock>();
+                if (spiralBlock.IsAnimating)
+                {
+                    isFinishedAnimating = false;
+                    break;
+                }
+            }
+        }
+
+        // If not currently animating
+        if (isFinishedAnimating)
+        {
+            _isAnimating = false;
+
             Vector2 myPosition = new Vector2(this.transform.position.x, this.transform.position.z);
             Vector2 playerPosition = new Vector2(_player.transform.position.x, _player.transform.position.z);
 
             if (Vector2.Distance(myPosition, playerPosition) <= DistanceThreshold)
             {
-                if (!this._isInitiated)
+                if (_isAnimatingIn)
                 {
-                    Debug.Log("IN");
-                    _isInitiated = true;
-                    InitAnimation();
-                    AnimateIn();
-                }
-                else
-                {
-                    if (!this._isAnimating)
-                    {
-                        //AnimateIn();
-                    }
+                    AnimateOut();
                 }
             }
             else
             {
-                Debug.Log("OUT");
-                AnimateOut();
+                if (_isAnimatingOut)
+                {
+                    AnimateIn();
+                }
             }
         }
     }
@@ -61,11 +82,10 @@ public class SpiralBehaviour : MonoBehaviour
             int currentIteration = i + 1;
 
             GameObject newGameObject = Instantiate(this.gameObject);
-            newGameObject.transform.position = this.transform.position;
-            newGameObject.transform.localScale *= (MaxIterations - currentIteration) * 0.1f;
-            newGameObject.transform.eulerAngles = this.transform.eulerAngles + new Vector3(-20 * currentIteration, 0, 0);
-
+            
             newGameObject.GetComponent<Bob>().enabled = false;
+
+            newGameObject.transform.position = this.transform.position;
 
             //
             SpiralBlock spiralBlock = newGameObject.AddComponent<SpiralBlock>() as SpiralBlock;
@@ -83,9 +103,38 @@ public class SpiralBehaviour : MonoBehaviour
         }
     }
 
+    // Spiral in
     private void AnimateIn()
     {
-        this._isAnimating = true;
+        Debug.Log("IN");
+
+        _isAnimating = true;
+        _isAnimatingIn = true;
+        _isAnimatingOut = false;
+
+        int currentIteration = 0;
+
+        foreach(Transform child in transform)
+        {
+            SpiralBlock spiralBlock = child.GetComponent<SpiralBlock>();
+            spiralBlock.Reset();
+            spiralBlock.AnimationLength = (MaxIterations - currentIteration) * 0.2f;   // 10 - 1
+            spiralBlock.DestinationPosition = Vector3.zero;
+            spiralBlock.DestinationScale = Vector3.zero;
+            spiralBlock.DestinationEulerAngles = Vector3.zero;
+
+            currentIteration++;
+        }
+    }
+
+    // Spiral out
+    private void AnimateOut()
+    {
+        Debug.Log("OUT");
+
+        _isAnimating = true;
+        _isAnimatingIn = false;
+        _isAnimatingOut = true;
 
         int currentIteration = 0;
 
@@ -97,25 +146,14 @@ public class SpiralBehaviour : MonoBehaviour
             float radius = (MaxIterations - currentIteration) * 0.25f;   // 10, 9, 8, ...
             float rad = (MaxIterations - currentIteration) * 20 * Mathf.Deg2Rad;
             Vector3 newPosition = new Vector3(0,
-                Mathf.Cos(rad) * radius + this.transform.position.y + 2.5f,
-                Mathf.Sin(rad) * radius + this.transform.position.z + 2.0f);
-            spiralBlock.Destination = newPosition;
-            spiralBlock.Speed = (MaxIterations - currentIteration) * 0.25f;
-
-            currentIteration++;
-        }
-    }
-
-    private void AnimateOut()
-    {
-        int currentIteration = 0;
-
-        foreach(Transform child in transform)
-        {
-            SpiralBlock spiralBlock = child.GetComponent<SpiralBlock>();
-            spiralBlock.Reset();
-            spiralBlock.Destination = this.transform.position;
-            spiralBlock.Speed = currentIteration * 0.5f;
+                Mathf.Cos(rad) * radius + this.transform.position.y + 0.75f,
+                Mathf.Sin(rad) * radius + this.transform.position.z - 2.0f);
+            
+            spiralBlock.AnimationLength = (currentIteration + 1) * 0.2f;   // 1 - 10
+            spiralBlock.transform.position = this.transform.position;   // reset position
+            spiralBlock.DestinationPosition = newPosition;
+            spiralBlock.DestinationScale = this.transform.localScale * (MaxIterations - currentIteration) * 0.1f;
+            spiralBlock.DestinationEulerAngles = this.transform.eulerAngles + new Vector3(-20 * currentIteration, 0, 0);
 
             currentIteration++;
         }
