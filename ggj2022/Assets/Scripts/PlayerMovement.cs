@@ -21,7 +21,9 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Move(InputAction.CallbackContext value) {
         if (MenuSystem.Instance.IsInMenu) {
-            MenuSystem.Instance.ProcessInput(mainAxis: value.ReadValue<Vector2>());
+            if (value.started) {
+                MenuSystem.Instance.ProcessInput(mainAxis: value.ReadValue<Vector2>());
+            }
             return;
         }
         moveVal = value.ReadValue<Vector2>();
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Submit(InputAction.CallbackContext value) {
-        if (debouncing) {
+        if (debouncing || !value.started) {
             return;
         }
         bool isDown = value.ReadValue<float>() > 0.5f;
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Cancel(InputAction.CallbackContext value) {
-        if (debouncing) {
+        if (debouncing || !value.started) {
             return;
         }
         bool isDown = value.ReadValueAsButton();

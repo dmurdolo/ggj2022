@@ -72,6 +72,9 @@ public class MenuSystem : MonoBehaviour {
         CurrentPath = nextPath;
         CurrentEntry = CurrentPath.Entries.FirstOrDefault();
         ShowEntryOptions = CurrentPath.Entries.Count <= 1 && CurrentPath.Options?.Count > 0;
+        if (CurrentPath.Entries.Count == 1) {
+            DoSelectOption(0);
+        }
     }
 
     private void AdvanceConversation() {
