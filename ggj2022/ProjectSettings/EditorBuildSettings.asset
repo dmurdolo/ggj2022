@@ -11,5 +11,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 4c8232f105a519045b6de0029379adab
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 25af936db8ad2f64db9aa04368540621
+  - enabled: 1
+    path: Assets/Scenes/EndA.unity
+    guid: f5475fce56219494eb0795dddc6f4604
+  - enabled: 1
+    path: Assets/Scenes/EndB.unity
+    guid: bcc02c99cecf34dcaabc72d18dc3131f
+  - enabled: 1
+    path: Assets/Scenes/EndNeutral.unity
+    guid: 9b6fffebbdc674a8386fe073b436ba57
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: adca10592a3965648967ac05d2a2f7ef, type: 2}
