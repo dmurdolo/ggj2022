@@ -7,7 +7,7 @@ public class SpiralBehaviour : MonoBehaviour
     public int MaxIterations = 10;
     public int Iteration = 0;
     public float DistanceThreshold = 2.0f;
-    public Vector3 Origin;
+    public Vector3 OriginalPosition;
 
     private GameObject _player;
     private bool _isAnimating = false;
@@ -20,6 +20,7 @@ public class SpiralBehaviour : MonoBehaviour
         
         if (this.Iteration == 0)
         {
+            OriginalPosition = transform.position;
             InitAnimation();
         }
     }
@@ -108,6 +109,13 @@ public class SpiralBehaviour : MonoBehaviour
     {
         Debug.Log("IN");
 
+        if (Iteration == 0)
+        {
+            AudioClip clip = (AudioClip) Resources.Load("spiralClose");
+            GetComponent<AudioSource>().clip = clip;
+            GetComponent<AudioSource>().Play();
+        }
+
         _isAnimating = true;
         _isAnimatingIn = true;
         _isAnimatingOut = false;
@@ -132,6 +140,13 @@ public class SpiralBehaviour : MonoBehaviour
     {
         Debug.Log("OUT");
 
+        if (Iteration == 0)
+        {
+            AudioClip clip = (AudioClip) Resources.Load("spiralOpen");
+            GetComponent<AudioSource>().clip = clip;
+            GetComponent<AudioSource>().Play();
+        }
+
         _isAnimating = true;
         _isAnimatingIn = false;
         _isAnimatingOut = true;
@@ -146,11 +161,11 @@ public class SpiralBehaviour : MonoBehaviour
             float radius = (MaxIterations - currentIteration) * 0.25f;   // 10, 9, 8, ...
             float rad = (MaxIterations - currentIteration) * 20 * Mathf.Deg2Rad;
             Vector3 newPosition = new Vector3(0,
-                Mathf.Cos(rad) * radius + this.transform.position.y + 0.75f,
-                Mathf.Sin(rad) * radius + this.transform.position.z - 2.0f);
+                Mathf.Cos(rad) * radius + OriginalPosition.y + 0.75f,
+                Mathf.Sin(rad) * radius + this.transform.position.z - 2.2f);
             
-            spiralBlock.AnimationLength = (currentIteration + 1) * 0.2f;   // 1 - 10
-            spiralBlock.transform.position = this.transform.position;   // reset position
+            spiralBlock.AnimationLength = (currentIteration + 1) * 0.4f;   // 1 - 10
+            spiralBlock.transform.position = OriginalPosition;   // reset position
             spiralBlock.DestinationPosition = newPosition;
             spiralBlock.DestinationScale = this.transform.localScale * (MaxIterations - currentIteration) * 0.1f;
             spiralBlock.DestinationEulerAngles = this.transform.eulerAngles + new Vector3(-20 * currentIteration, 0, 0);
