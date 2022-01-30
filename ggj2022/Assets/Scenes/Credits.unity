@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 864716824}
   - component: {fileID: 864716826}
   - component: {fileID: 864716825}
+  - component: {fileID: 864716827}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -491,11 +492,11 @@ RectTransform:
   m_Father: {fileID: 1681131875}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 362.7, y: 198.3}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 362.7, y: 2500}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &864716825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,18 +524,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Credits
-
-
-    Me  You  Other
-
-    Town A  Town B'
+  m_Text: "\n\n\n\nCredits\n\n\n\n\n\n\n\n\nProgrammers\n\n\nBen X Tan\n\nDaniel
+    Murdolo\n\nNathaniel Wong\n\n\n\n\n\n\n\n\nArt \n\n\nTom Jackson \n\n\n\n\n\n\n\n\nMusic
+    - SFX - Dialogue\n\n\nAndrew Rickett\n\n\n\n\n\n"
 --- !u!222 &864716826
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -543,6 +541,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864716823}
   m_CullTransparentMesh: 1
+--- !u!114 &864716827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864716823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcc377248e3041cd9c616a9d8e464a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 35
 --- !u!1 &956987422
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.14117648}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
