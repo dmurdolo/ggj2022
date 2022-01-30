@@ -41,21 +41,22 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Are we done here?
+  Config: 'I see you''ve been going around my town talking to my people, my voters,
+    who elected me to the lofty office of Town Mayor. What have you been saying?
+    Seems to me a person of your apparent sudden popularity might be trying to depose
+    me!
 
-    [Yes] Yes
+    [Yes] Wouldn''t dream of it
 
-    [No] No
+    {townAComplete}
 
-    [Maybe] Maybe
+    [No] What if I
+    am?
 
 
     <Yes>
 
-    Everything''s
-    all right.
-
-    Thanks for confirming that...
+    I wouldn''t blame you, this chain is pretty nice
 
     [done]
 
@@ -64,9 +65,5 @@ MonoBehaviour:
 
     <No>
 
-    Oh,
-    ok.
-
-    Thanks for letting me know.
-
-    I''ll keep that in mind.'
+    The
+    people will never vote for you!'

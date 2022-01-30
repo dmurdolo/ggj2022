@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,8 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "Heya!!! Welcome to my shop, I\u2019m Catarrh Throatees. Nice to meet you.
+    Can I interest you in one of these?\u2026 No? You don\u2019t want anything? There's
+    talk of some dodgy character getting people to join some cult. Bet they're the
+    kind to steal from my shop.\n[Yes] Have faith\n[No] Welcoming...\n\n<Yes>\nI
+    bet they're all thinking of robbing me!\n\n<No>\nI'm not accusing you... yet"

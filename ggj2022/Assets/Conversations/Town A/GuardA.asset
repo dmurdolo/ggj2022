@@ -22,7 +22,8 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
-      AddStates: []
+      AddStates:
+      - openGateA
       RemoveStates: []
     - Text: No
       Path: No
@@ -43,37 +44,22 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
+  Config: 'Looks like you''ve spoken to the others, shall I open the gate?
 
     [Yes]
-    Yes
+    Please do
 
     {openGateA}
 
-    [No] No
-
-    [Maybe] Maybe
+    [No] Not yet
 
 
     <Yes>
 
-    Everything''s
-    all right.
-
-    Thanks for confirming that...
+    In you go
 
 
     <No>
 
-    Oh, ok.
-
-    Thanks
-    for letting me know.
-
-    I''ll keep that in mind.'
+    You
+    know where to find me'

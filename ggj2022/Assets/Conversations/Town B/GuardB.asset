@@ -44,37 +44,22 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
+  Config: 'You''ve visited our neighbours, good. I''ll open the gate.
 
     [Yes]
-    Yes
+    Thanks
 
     {openGateB}
 
-    [No] No
-
-    [Maybe] Maybe
+    [No] Not yet
 
 
     <Yes>
 
-    Everything''s
-    all right.
-
-    Thanks for confirming that...
+    Welcome to the castle
 
 
     <No>
 
-    Oh, ok.
-
-    Thanks
-    for letting me know.
-
-    I''ll keep that in mind.'
+    Oh,
+    ok. Let me know when'
