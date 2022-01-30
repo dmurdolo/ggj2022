@@ -426,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355371973
 RectTransform:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4961259977461551890, guid: 4ea63e4b1f25b4f39ab7ce95f47c59d5, type: 3}
       propertyPath: IsInTitleMenu
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4961259977461551891, guid: 4ea63e4b1f25b4f39ab7ce95f47c59d5, type: 3}
       propertyPath: m_RootOrder
@@ -674,6 +674,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &989274829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989274831}
+  - component: {fileID: 989274830}
+  m_Layer: 0
+  m_Name: Conversation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &989274830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989274829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eff3030abe484a9e86b8260df645ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Branches:
+  - State: 
+    Conversation: {fileID: 11400000, guid: d773ea2e653584c2fa3b959c4e331e34, type: 2}
+  AutoTrigger: 1
+  AutoTriggerDelay: 3
+  DebugStart: 0
+  IsSelectedByPlayer: 0
+--- !u!4 &989274831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989274829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.783106, y: -10.003388, z: 38.34934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345817446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugTrigger: 0
-  ToSceneName: Scenes/StoryIntro
+  ToSceneName: Scenes/GameScene
 --- !u!1001 &1994155636
 PrefabInstance:
   m_ObjectHideFlags: 0
