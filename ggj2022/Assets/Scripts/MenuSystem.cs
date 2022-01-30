@@ -18,11 +18,23 @@ public class MenuSystem : MonoBehaviour {
     public int HighlightedOption = 0;
 
     public GUIStyle Style;
+    public GameObject ConversationCanvasPrefab;
+    public ConversationUI ConversationUI;
 
     public static MenuSystem Instance;
 
     protected void OnEnable() {
         Instance = this;
+        if (!ConversationUI) {
+            ConversationUI = Instantiate(ConversationCanvasPrefab).GetComponent<ConversationUI>();
+            ConversationUI.gameObject.transform.parent = this.gameObject.transform;
+            ConversationUI.gameObject.SetActive(false);
+
+            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(0));
+            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(1));
+            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(2));
+        }
+        StopConversation();
     }
 
     protected void Update() {
@@ -35,6 +47,51 @@ public class MenuSystem : MonoBehaviour {
             DebugSelectOption = -1;
             DoSelectOption(selectedOption);
         }
+
+        if (ConversationUI) {
+            ConversationUI.gameObject.SetActive(false);
+        }
+        if (CurrentConversation == null || CurrentPath == null) {
+            return;
+        }
+        bool uiVisible = false;
+        if (CurrentEntry != null) {
+            ConversationUI.MainText.text = CurrentEntry.Text;
+            uiVisible = true;
+            (UnityEngine.UI.Button, UnityEngine.UI.Text)[] buttons = {
+                (ConversationUI.Option1, ConversationUI.OptionText1),
+                (ConversationUI.Option2, ConversationUI.OptionText2),
+                (ConversationUI.Option3, ConversationUI.OptionText3),
+            };
+            foreach (var (button, _) in buttons) {
+                if (button) {
+                    button.gameObject.SetActive(false);
+                }
+            }
+            if (ShowEntryOptions) {
+                int index = 0;
+                foreach (var option in CurrentPath.Options) {
+                    UnityEngine.UI.Button button = null;
+                    UnityEngine.UI.Text buttonText = null;
+                    if (index < buttons.Length) {
+                        (button, buttonText) = buttons[index];
+                    } else {
+                        break;
+                    }
+
+                    if (button && buttonText) {
+                        button.gameObject.SetActive(true);
+                        string text = option.Text;
+                        if (index == HighlightedOption) {
+                            button.Select();
+                        }
+                        buttonText.text = text;
+                    }
+                    index++;
+                }
+            }
+        }
+        ConversationUI.gameObject.SetActive(uiVisible);
     }
 
     private void DoSelectOption(int selectedOption) {
@@ -109,7 +166,7 @@ public class MenuSystem : MonoBehaviour {
     public void ProcessInput(Vector2? mainAxis = null, bool? accept = null, bool? cancel = null) {
         if (ShowEntryOptions) {
             if (mainAxis != null) {
-                int selectDelta = Mathf.RoundToInt(mainAxis.Value.y - mainAxis.Value.x);
+                int selectDelta = Mathf.RoundToInt(-mainAxis.Value.y + mainAxis.Value.x);
                 int optionCount = CurrentPath?.Options?.Count ?? 1;
                 HighlightedOption = ((HighlightedOption + selectDelta) + optionCount) % optionCount;
             }
@@ -123,23 +180,23 @@ public class MenuSystem : MonoBehaviour {
         }
     }
 
-    protected void OnGUI() {
-        if (CurrentPath == null) {
-            return;
-        }
-        if (CurrentEntry != null) {
-            GUI.Label(new Rect(0, 0, 300, 100), CurrentEntry.Text, Style);
-        }
-        if (ShowEntryOptions) {
-            int index = 0;
-            foreach (var option in CurrentPath.Options) {
-                string text = option.Text;
-                if (index == HighlightedOption) {
-                    text = $"[{text}]";
-                }
-                GUI.Label(new Rect(30, 50 + index * 30, 300, 50), text, Style);
-                index++;
-            }
-        }
-    }
+    // protected void OnGUI() {
+    //     if (CurrentPath == null) {
+    //         return;
+    //     }
+    //     if (CurrentEntry != null) {
+    //         GUI.Label(new Rect(0, 0, 300, 100), CurrentEntry.Text, Style);
+    //     }
+    //     if (ShowEntryOptions) {
+    //         int index = 0;
+    //         foreach (var option in CurrentPath.Options) {
+    //             string text = option.Text;
+    //             if (index == HighlightedOption) {
+    //                 text = $"[{text}]";
+    //             }
+    //             GUI.Label(new Rect(30, 50 + index * 30, 300, 50), text, Style);
+    //             index++;
+    //         }
+    //     }
+    // }
 }
