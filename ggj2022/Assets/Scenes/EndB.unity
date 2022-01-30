@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugTrigger: 0
-  ToSceneName: Scenes/TitleScreen
+  ToSceneName: Scenes/Credits
 --- !u!1001 &1994155636
 PrefabInstance:
   m_ObjectHideFlags: 0
