@@ -112,8 +112,11 @@ public class SpiralBehaviour : MonoBehaviour
         if (Iteration == 0)
         {
             AudioClip clip = (AudioClip) Resources.Load("spiralClose");
-            GetComponent<AudioSource>().clip = clip;
-            GetComponent<AudioSource>().Play();
+            var audioSource = GetComponent<AudioSource>();
+            if (audioSource) {
+                audioSource.clip = clip;
+                audioSource.Play();
+            }
         }
 
         _isAnimating = true;
@@ -143,8 +146,11 @@ public class SpiralBehaviour : MonoBehaviour
         if (Iteration == 0)
         {
             AudioClip clip = (AudioClip) Resources.Load("spiralOpen");
-            GetComponent<AudioSource>().clip = clip;
-            GetComponent<AudioSource>().Play();
+            var audioSource = GetComponent<AudioSource>();
+            if (audioSource) {
+                audioSource.clip = clip;
+                audioSource.Play();
+            }
         }
 
         _isAnimating = true;
