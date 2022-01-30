@@ -122,3 +122,4 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  ConversationCanvasPrefab: {fileID: 4196477955835828812, guid: 6b759de99226a48deac23c0debd2d20b, type: 3}

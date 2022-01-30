@@ -7,7 +7,7 @@ public class TriggerOnStoryState : MonoBehaviour {
 
     private string _registeredState = "";
 
-    public void OnEnabled() {
+    public void Start() {
         _registeredState = ListenForState;
         FindObjectOfType<StoryStateManager>().AddListener(this, ListenForState, Trigger);
     }
@@ -18,9 +18,8 @@ public class TriggerOnStoryState : MonoBehaviour {
 
     protected void OnValidate() {
         OnDisabled();
-        OnEnabled();
     }
-
+    
     private void Trigger() {
         foreach (var triggerable in GetComponents<ITriggerable>()) {
             triggerable.Trigger();

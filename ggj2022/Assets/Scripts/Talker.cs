@@ -36,6 +36,9 @@ public class Talker : MonoBehaviour {
         if (conversation) {
             FindObjectOfType<MenuSystem>().StartConversation(conversation);
             
+            Transform bubble = this.transform.Find("Container/SpeechBubble");
+            bubble.GetComponent<AudioSource>().Stop();
+
             AudioSource audioSource = this.GetComponent<AudioSource>();
             if (audioSource)
             {
@@ -62,13 +65,12 @@ public class Talker : MonoBehaviour {
         }
         
         Transform bubble = this.transform.Find("Container/SpeechBubble");
-        if (bubble) {
-            bubble.localScale = new Vector3(200, 200, 200);
-            Bob bob = bubble.GetComponent<Bob>();
-            bob.Speed = 15.0f;
-            bob.Distance = 0.1f;
-            bob.Offset = 1;
-        }
+        bubble.GetComponent<AudioSource>().Play();
+        bubble.localScale = new Vector3(200, 200, 200);
+        Bob bob = bubble.GetComponent<Bob>();
+        bob.Speed = 15.0f;
+        bob.Distance = 0.1f;
+        bob.Offset = 1;
 
         player.AddTalker(this);
     }
@@ -80,13 +82,12 @@ public class Talker : MonoBehaviour {
         }
 
         Transform bubble = this.transform.Find("Container/SpeechBubble");
-        if (bubble) {
-            bubble.localScale = new Vector3(150, 150, 150);
-            Bob bob = bubble.GetComponent<Bob>();
-            bob.Speed = 1.0f;
-            bob.Distance = 0.1f;
-            bob.Offset = 0;
-        }
+        bubble.GetComponent<AudioSource>().Stop();
+        bubble.localScale = new Vector3(150, 150, 150);
+        Bob bob = bubble.GetComponent<Bob>();
+        bob.Speed = 1.0f;
+        bob.Distance = 0.1f;
+        bob.Offset = 0;
 
         player.RemoveTalker(this);
     }
