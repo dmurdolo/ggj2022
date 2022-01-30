@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.33371285, g: 0.49977273, b: 0.8330078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1234,7 +1234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96b06c029592484b9751ef9dacb254a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 2144077074}
 --- !u!1 &244723398
 GameObject:
   m_ObjectHideFlags: 0
@@ -7661,7 +7660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4660015253565129549, guid: 64d65d8a6cd12494d8bac642a7df809b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.3
+      value: -11.200001
       objectReference: {fileID: 0}
     - target: {fileID: 4660015253565129549, guid: 64d65d8a6cd12494d8bac642a7df809b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13289,11 +13288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[0].State
-      value: postmasterBComplete
+      value: gateAOpen
       objectReference: {fileID: 0}
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[1].State
-      value: gateAOpen
+      value: postmasterBComplete
       objectReference: {fileID: 0}
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[2].State
@@ -13302,11 +13301,11 @@ PrefabInstance:
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[0].Conversation
       value: 
-      objectReference: {fileID: 11400000, guid: bb20bad55b4f8e84498cbcea2b305a3d, type: 2}
+      objectReference: {fileID: 11400000, guid: db678400d3e2dbf4dae1ffba7e772fe2, type: 2}
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[1].Conversation
       value: 
-      objectReference: {fileID: 11400000, guid: db678400d3e2dbf4dae1ffba7e772fe2, type: 2}
+      objectReference: {fileID: 11400000, guid: bb20bad55b4f8e84498cbcea2b305a3d, type: 2}
     - target: {fileID: 6560963370548270989, guid: e262c38f2c602a84a92c2279a46f43e9, type: 3}
       propertyPath: Branches.Array.data[2].Conversation
       value: 
@@ -13390,7 +13389,7 @@ MonoBehaviour:
   MaxIterations: 10
   Iteration: 0
   DistanceThreshold: 2
-  Origin: {x: 0, y: 0, z: 0}
+  OriginalPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2130223166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13600,17 +13599,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137151109}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2144077074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2678114269813365909, guid: fbdfd5515967b6348931d002eca6a646, type: 3}
-  m_PrefabInstance: {fileID: 1032630731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2144077075 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8803621718670730787, guid: fbdfd5515967b6348931d002eca6a646, type: 3}
   m_PrefabInstance: {fileID: 1032630731}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2144077074}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 357db5bd939af44d2bc36416af3c0080, type: 3}
