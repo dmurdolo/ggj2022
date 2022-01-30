@@ -707,7 +707,7 @@ MonoBehaviour:
   - State: 
     Conversation: {fileID: 11400000, guid: d773ea2e653584c2fa3b959c4e331e34, type: 2}
   AutoTrigger: 1
-  AutoTriggerDelay: 3
+  AutoTriggerDelay: 0.2
   DebugStart: 0
   IsSelectedByPlayer: 0
 --- !u!4 &989274831
