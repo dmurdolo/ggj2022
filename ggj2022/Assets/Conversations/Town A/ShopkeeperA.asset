@@ -22,7 +22,8 @@ MonoBehaviour:
     Options:
     - Text: Have faith
       Path: Yes
-      AddStates: []
+      AddStates:
+      - postmasterAComplete
       RemoveStates: []
     - Text: Welcoming...
       Path: No
@@ -39,5 +40,5 @@ MonoBehaviour:
   Config: "Heya!!! Welcome to my shop, I\u2019m Catarrh Throatees. Nice to meet you.
     Can I interest you in one of these?\u2026 No? You don\u2019t want anything? There's
     talk of some dodgy character getting people to join some cult. Bet they're the
-    kind to steal from my shop.\n[Yes] Have faith\n{postmasterAComplete}\n[No] Welcoming...\n\n<Yes>\nI
+    kind to steal from my shop.\n[Yes] Have faith\n{midAComplete}\n[No] Welcoming...\n\n<Yes>\nI
     bet they're all thinking of robbing me!\n\n<No>\nI'm not accusing you... yet"
