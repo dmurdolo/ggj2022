@@ -8,7 +8,6 @@ public class SceneTransitionOnTrigger : MonoBehaviour, ITriggerable {
     public string ToSceneName;
 
     public void Trigger() {
-        Debug.LogError(ToSceneName);
         SceneTransitioner transitioner = new GameObject(nameof(SceneTransitioner)).AddComponent<SceneTransitioner>();
         GameObject.DontDestroyOnLoad(transitioner.gameObject);
         transitioner.ToSceneName = ToSceneName;

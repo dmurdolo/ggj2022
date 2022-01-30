@@ -122,7 +122,6 @@ public class MenuSystem : MonoBehaviour {
         if (accept == true) {
             if (IsInTitleMenu)
             {
-                Debug.LogError("Close Title Menu");
                 GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
                 FindObjectOfType<StoryStateManager>().AddState("next");
             }
