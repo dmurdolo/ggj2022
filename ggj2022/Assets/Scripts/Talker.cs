@@ -35,6 +35,7 @@ public class Talker : MonoBehaviour {
         }
         if (conversation) {
             FindObjectOfType<MenuSystem>().StartConversation(conversation);
+            this.GetComponent<AudioSource>().Play();
         }
     }
 

@@ -1,31 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
     private AudioSource[] _audioSources;
-
-    // Test
-    public GameObject Player;
+    private GameObject _player;
 
     void Start()
     {
+        _player = GameObject.Find("Player");
+
         // mid, good, bad
         _audioSources = GetComponents<AudioSource>();
 
+        /*
         for (int i = 0; i < _audioSources.Length; i++)
         {
             Debug.Log(_audioSources[i].clip.length);
         }
+        */
     }
 
     void Update()
     {
-        // z: 60 to 14  = good fade
-        // z: 14 to -14 = only midZ = 
+        // Mid always plays at volume 1
+        // z:  60 to  14 = good fade
+        // z:  14 to -14 = only midZ
+        // z: -14 to -60 = bad fade
 
-        float playerZ = Player.transform.position.z;
+        float playerZ = _player.transform.position.z;
         float goodVolume = 0;
         float badVolume = 0;
 
