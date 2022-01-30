@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,9 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "There is a prophecy ....\u201DOut of the storm, the crowd, the swarm,
+    the tempest;  a being shall emerge and there shall they fall within our very
+    streets! With their hands, the power of destruction. To rip apart the very fabric
+    of our gooey walls!\u201D \n[Yes] Go on\n[No] Ridiculous\n\n<Yes>\n\u2026\u201Dand
+    those that follow this truth, they are the ones that know!\u201D\n\n<No>\nI suppose
+    we shall see"

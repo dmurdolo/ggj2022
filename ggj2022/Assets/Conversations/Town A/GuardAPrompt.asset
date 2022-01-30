@@ -15,30 +15,31 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: You should really go visit the other town...
+    - Text: I hear things are changing back in X, maybe not for the better. Think
+        you could go look for me? Can't leave my post
     Options:
-    - Text: Sure thing
+    - Text: I'll see what I can find out
       Path: Yes
       AddStates:
       - midTierAComplete
       RemoveStates: []
-    - Text: Why?
+    - Text: It's fine
       Path: No
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Have a good time
+    - Text: Thanks friend!
     Options: []
   - Name: No
     Entries:
-    - Text: You would thank me when you get there...
+    - Text: Wouldn't be so sure about that *grumbles*
     Options: []
-  Config: 'I hear things are changing back in X, maybe not for the better. Think
-    you could go look for me? Can''t leave my post
+  Config: 'I hear things are changing in the next town over, maybe not for the better.
+    Think you could go look for me? Can''t leave my post
 
-    [Yes] I''ll see what I can
-    find out
+    [Yes] I''ll see what
+    I can find out
 
     {midTierAComplete}
 

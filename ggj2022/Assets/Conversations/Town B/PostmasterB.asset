@@ -15,12 +15,13 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: "Hey!! Flemrick Cofferson\u2019s the name. Have I seen you around here
+        before? Tell ya what, I\u2019ll let you in on something I\u2019ve been telling
+        everyone collecting their post from me today\u2026 there's this giant monster
+        coming\u2026 could come from anywhere, gonna destroy the town! Keep your
+        eyes peeled, and let everyone know."
     Options:
-    - Text: Yes
+    - Text: Sure thing Flemy!!
       Path: Yes
       AddStates:
       - postmasterBComplete
@@ -29,14 +30,9 @@ MonoBehaviour:
       Path: No
       AddStates: []
       RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
-      AddStates: []
-      RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Thanks!
     Options: []
   - Name: No
     Entries:
@@ -49,5 +45,5 @@ MonoBehaviour:
     everyone collecting their post from me today\u2026 there's this giant monster
     coming\u2026 could come from anywhere, gonna destroy the town! Keep your eyes
     peeled, and let everyone know. \n[Yes] Sure thing Flemy!!\n{postmasterBComplete}\n[No]
-    No\n\n<Yes>\nThanks!\n\n<No>\nOh, ok.\nThanks for letting me know.\nI'll keep
-    that in mind."
+    Sounds like a rumour\n\n<Yes>\nThanks friend!\n\n<No>\nDon't come find me when
+    it's too late"

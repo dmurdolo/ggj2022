@@ -15,14 +15,12 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: Are we done here?
     Options:
     - Text: Yes
       Path: Yes
-      AddStates: []
+      AddStates:
+      - townBComplete
       RemoveStates: []
     - Text: No
       Path: No
@@ -43,30 +41,10 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Are we done here?
-
-    [Yes] Yes
-
-    {townBComplete}
-
-    [No] No
-
-    [Maybe]
-    Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks for confirming that...
-
-
-    <No>
-
-    Oh,
-    ok.
-
-    Thanks for letting me know.
-
-    I''ll keep that in mind.'
+  Config: "Hmmm what have we here?....Never seen you before. But\u2026 Something
+    seems very familiar about you, Like I\u2019ve seen you in one of my visions.
+    Have you read of my Prophecy!! It\u2019s true I tell you I see the signs of the
+    havoc that will be unleashed upon us. I see the flame of your belief flickering
+    in your eyes! \n[Yes] It is you?!\n{townBComplete}\n[No] *backs away slowly*\n\n<Yes>\nWhat
+    an honour it must be to meet a man of such great insight!\n\n<No>\nUnbelievers
+    are not welcome here"
