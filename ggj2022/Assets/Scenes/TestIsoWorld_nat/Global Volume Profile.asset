@@ -103,13 +103,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.4008016}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.85011035}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: 0.02004008}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.40622723}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.20040083}
+    m_Value: {x: 1, y: 1, z: 1, w: -0.37321192}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     m_Value: {fileID: 8534537815417165676, guid: 4d6434d3c43ceea4c95435d28962e853, type: 3}
   lutContribution:
     m_OverrideState: 1
-    m_Value: 0.418
+    m_Value: 0.349
 --- !u!114 &5110141865457090179
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -346,7 +346,7 @@ MonoBehaviour:
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.169
+    m_Value: 0.179
   response:
     m_OverrideState: 1
     m_Value: 1
