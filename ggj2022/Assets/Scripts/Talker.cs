@@ -86,7 +86,7 @@ public class Talker : MonoBehaviour {
             if (bob) {
                 bob.Speed = 15.0f;
                 bob.Distance = 0.1f;
-                bob.Offset = 1;
+                bob.Offset = 1.2f;
             }
         }
 
@@ -106,7 +106,7 @@ public class Talker : MonoBehaviour {
             Bob bob = bubble.GetComponent<Bob>();
             if (bob) {
                 bob.Speed = 1.0f;
-                bob.Distance = 0.1f;
+                bob.Distance = 0.05f;
                 bob.Offset = 0;
             }
         }
