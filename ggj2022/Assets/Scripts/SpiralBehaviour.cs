@@ -164,7 +164,7 @@ public class SpiralBehaviour : MonoBehaviour
                 Mathf.Cos(rad) * radius + OriginalPosition.y + 0.75f,
                 Mathf.Sin(rad) * radius + this.transform.position.z - 2.2f);
             
-            spiralBlock.AnimationLength = (currentIteration + 1) * 0.4f;   // 1 - 10
+            spiralBlock.AnimationLength = (currentIteration + 1) * 0.2f;   // 1 - 10
             spiralBlock.transform.position = OriginalPosition;   // reset position
             spiralBlock.DestinationPosition = newPosition;
             spiralBlock.DestinationScale = this.transform.localScale * (MaxIterations - currentIteration) * 0.1f;

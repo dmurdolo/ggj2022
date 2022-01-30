@@ -35,7 +35,16 @@ public class Talker : MonoBehaviour {
         }
         if (conversation) {
             FindObjectOfType<MenuSystem>().StartConversation(conversation);
-            this.GetComponent<AudioSource>().Play();
+            
+            AudioSource audioSource = this.GetComponent<AudioSource>();
+            if (audioSource)
+            {
+                this.GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                Debug.Log("No Audio Source");
+            }
         }
     }
 
