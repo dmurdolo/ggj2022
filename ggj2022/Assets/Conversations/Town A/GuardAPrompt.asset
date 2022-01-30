@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
+  m_Name: GuardAPrompt
+  m_EditorClassIdentifier: 
+  Paths:
+  - Name: 
+    Entries:
+    - Text: You should really go visit the other town...
+    Options:
+    - Text: Sure thing
+      Path: Yes
+      AddStates:
+      - midTierAComplete
+      RemoveStates: []
+    - Text: Why?
+      Path: No
+      AddStates: []
+      RemoveStates: []
+  - Name: Yes
+    Entries:
+    - Text: Have a good time
+    Options: []
+  - Name: No
+    Entries:
+    - Text: You would thank me when you get there...
+    Options: []
+  Config: 'I hear things are changing back in X, maybe not for the better. Think
+    you could go look for me? Can''t leave my post
+
+    [Yes] I''ll see what I can
+    find out
+
+    {midTierAComplete}
+
+    [No] It''s fine
+
+
+    <Yes>
+
+    Thanks
+    friend!
+
+
+    <No>
+
+    Wouldn''t be so sure about that *grumbles*'
