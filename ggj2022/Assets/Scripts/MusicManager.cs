@@ -28,7 +28,7 @@ public class MusicManager : MonoBehaviour
         // z: -14 to -60 = bad fade
 
         float playerZ = _player.transform.position.z;
-        float maxMusicVolume = 0.25f;
+        float maxMusicVolume = 0.1f;
         float goodVolume = 0;
         float badVolume = 0;
 

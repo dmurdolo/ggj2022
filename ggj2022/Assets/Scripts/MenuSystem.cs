@@ -13,7 +13,9 @@ public class MenuSystem : MonoBehaviour {
     public bool DebugAdvance = false;
     public int DebugSelectOption = -1;
 
-    public bool IsInMenu => CurrentConversation != null;
+    public bool IsInMenu => CurrentConversation != null || IsInTitleMenu;
+    
+    public bool IsInTitleMenu;
 
     public int HighlightedOption = 0;
 
@@ -104,14 +106,17 @@ public class MenuSystem : MonoBehaviour {
         var option = CurrentPath.Options[selectedOption];
 
         var storyStateManager = FindObjectOfType<StoryStateManager>();
-        if (option.AddStates != null) {
-            foreach (var state in option.AddStates) {
-                storyStateManager.AddState(state);
+        if (storyStateManager)
+        {
+            if (option.AddStates != null) {
+                foreach (var state in option.AddStates) {
+                    storyStateManager.AddState(state);
+                }
             }
-        }
-        if (option.RemoveStates != null) {
-            foreach (var state in option.RemoveStates) {
-                storyStateManager.RemoveState(state);
+            if (option.RemoveStates != null) {
+                foreach (var state in option.RemoveStates) {
+                    storyStateManager.RemoveState(state);
+                }
             }
         }
 
@@ -172,10 +177,23 @@ public class MenuSystem : MonoBehaviour {
             }
         }
         if (accept == true) {
-            if (ShowEntryOptions) {
-                DoSelectOption(HighlightedOption);
-            } else {
-                AdvanceConversation();
+            if (IsInTitleMenu)
+            {
+                GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
+                FindObjectOfType<StoryStateManager>().AddState("next");
+            }
+            else
+            {
+                if (ShowEntryOptions) {
+                    DoSelectOption(HighlightedOption);
+                } else {
+                    AdvanceConversation();
+                }
+            }
+        } else if (cancel == true){ 
+            if (IsInTitleMenu)
+            {
+                Application.Quit();
             }
         }
     }
