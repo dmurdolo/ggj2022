@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
         debouncing = true;
-        if (MenuSystem.Instance.IsInMenu) {
+        if (MenuSystem.Instance.WantsInput) {
             MenuSystem.Instance.ProcessInput(accept: true);
             return;
         }
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
         debouncing = true;
-        if (MenuSystem.Instance.IsInMenu) {
+        if (MenuSystem.Instance.WantsInput) {
             MenuSystem.Instance.ProcessInput(cancel: true);
             return;
         }
