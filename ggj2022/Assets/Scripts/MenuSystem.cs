@@ -70,7 +70,7 @@ public class MenuSystem : MonoBehaviour {
                     button.gameObject.SetActive(false);
                 }
             }
-            if (ShowEntryOptions) {
+            if (ShowEntryOptions && CurrentPath.Options.Count > 1) {
                 int index = 0;
                 foreach (var option in CurrentPath.Options) {
                     UnityEngine.UI.Button button = null;
@@ -129,9 +129,6 @@ public class MenuSystem : MonoBehaviour {
         CurrentPath = nextPath;
         CurrentEntry = CurrentPath.Entries.FirstOrDefault();
         ShowEntryOptions = CurrentPath.Entries.Count <= 1 && CurrentPath.Options?.Count > 0;
-        if (CurrentPath.Entries.Count == 1) {
-            DoSelectOption(0);
-        }
     }
 
     private void AdvanceConversation() {
