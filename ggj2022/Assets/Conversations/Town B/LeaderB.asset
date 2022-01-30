@@ -15,36 +15,33 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Are we done here?
+    - Text: "Hmmm what have we here?....Never seen you before. But\u2026 Something
+        seems very familiar about you, Like I\u2019ve seen you in one of my visions.
+        Have you read of my Prophecy!! It\u2019s true I tell you I see the signs
+        of the havoc that will be unleashed upon us. I see the flame of your belief
+        flickering in your eyes!"
     Options:
-    - Text: Yes
+    - Text: It is you?!
       Path: Yes
       AddStates:
       - townBComplete
       RemoveStates: []
-    - Text: No
+    - Text: '*backs away slowly*'
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: What an honour for you  to meet a man of such great insight!
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: Unbelievers are not welcome here!
     Options: []
   Config: "Hmmm what have we here?....Never seen you before. But\u2026 Something
     seems very familiar about you, Like I\u2019ve seen you in one of my visions.
     Have you read of my Prophecy!! It\u2019s true I tell you I see the signs of the
     havoc that will be unleashed upon us. I see the flame of your belief flickering
-    in your eyes! \n[Yes] It is you?!\n{townBComplete}\n[No] *backs away slowly*\n\n<Yes>\nWhat
-    an honour for you  to meet a man of such great insight!\n\n<No>\nUnbelievers
+    in your eyes! \n[Yes] It is you?!\n[No] *backs away slowly*\n\n<Yes>\nWhat an
+    honour for you  to meet a man of such great insight!\n[done]\n{townBComplete}\n\n<No>\nUnbelievers
     are not welcome here!"
