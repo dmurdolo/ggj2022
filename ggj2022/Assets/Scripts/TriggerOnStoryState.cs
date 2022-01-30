@@ -26,7 +26,3 @@ public class TriggerOnStoryState : MonoBehaviour {
         }
     }
 }
-
-public interface ITriggerable {
-    void Trigger();
-}
