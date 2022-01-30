@@ -60,6 +60,14 @@ public class Talker : MonoBehaviour {
         if (!player) {
             return;
         }
+        
+        Transform bubble = this.transform.Find("Container/SpeechBubble");
+        bubble.localScale = new Vector3(200, 200, 200);
+        Bob bob = bubble.GetComponent<Bob>();
+        bob.Speed = 15.0f;
+        bob.Distance = 0.1f;
+        bob.Offset = 1;
+
         player.AddTalker(this);
     }
 
@@ -68,6 +76,14 @@ public class Talker : MonoBehaviour {
         if (!player) {
             return;
         }
+
+        Transform bubble = this.transform.Find("Container/SpeechBubble");
+        bubble.localScale = new Vector3(150, 150, 150);
+        Bob bob = bubble.GetComponent<Bob>();
+        bob.Speed = 1.0f;
+        bob.Distance = 0.1f;
+        bob.Offset = 0;
+
         player.RemoveTalker(this);
     }
 

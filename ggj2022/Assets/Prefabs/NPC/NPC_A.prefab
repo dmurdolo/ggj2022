@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1173952210668061248}
   - component: {fileID: 8703737315537301145}
   - component: {fileID: 1971558643430184586}
+  - component: {fileID: 5605577895696283164}
   m_Layer: 0
   m_Name: SpeechBubble
   m_TagString: Untagged
@@ -83,6 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5605577895696283164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749244410399012268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e181a5a351d4854991404585328d343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  Distance: 0.1
+  Offset: 0
 --- !u!1 &2717456058881532224
 GameObject:
   m_ObjectHideFlags: 0
