@@ -36,6 +36,9 @@ public class Talker : MonoBehaviour {
         if (conversation) {
             FindObjectOfType<MenuSystem>().StartConversation(conversation);
             
+            Transform bubble = this.transform.Find("Container/SpeechBubble");
+            bubble.GetComponent<AudioSource>().Stop();
+
             AudioSource audioSource = this.GetComponent<AudioSource>();
             if (audioSource)
             {

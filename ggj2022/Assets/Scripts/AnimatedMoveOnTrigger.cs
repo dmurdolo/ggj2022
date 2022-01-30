@@ -48,6 +48,9 @@ public class AnimatedMoveOnTrigger : MonoBehaviour, ITriggerable {
     public void Trigger() {
         enabled = true;
         Triggered = true;
+
+        Debug.Log("OPEN");
+        this.GetComponent<AudioSource>().Play();
     }
 
     public void OnValidate() {
