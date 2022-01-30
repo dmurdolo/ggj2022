@@ -40,7 +40,7 @@ public class SpiralBlock : MonoBehaviour
                 this.transform.localScale = DestinationScale;
                 this.transform.eulerAngles = DestinationEulerAngles;
 
-                Debug.Log("DONE ANIMATING");
+                //Debug.Log("DONE ANIMATING");
             }
         }
     }
