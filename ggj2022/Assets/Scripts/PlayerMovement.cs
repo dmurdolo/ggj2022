@@ -4,19 +4,21 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour {
+    public const float DebounceTime = 0.1f;
     public PlayerController[] Players;
 
     public Vector2 moveVal;
     public float moveSpeed;
 
-    private bool debouncing;
+    private bool _debouncing = false;
+    private float _debounceRealtime = 0.0f;
 
     protected void Start() {
         Players = FindObjectsOfType<PlayerController>();
     }
 
     protected void Update() {
-        debouncing = false;
+        ProcessDebouncing();
     }
 
     public void Move(InputAction.CallbackContext value) {
@@ -34,14 +36,14 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Submit(InputAction.CallbackContext value) {
-        if (debouncing || !value.started) {
+        if (_debouncing || !value.started) {
             return;
         }
         bool isDown = value.ReadValue<float>() > 0.5f;
         if (!isDown) {
             return;
         }
-        debouncing = true;
+        StartDebouncing();
         if (MenuSystem.Instance.WantsInput) {
             MenuSystem.Instance.ProcessInput(accept: true);
             return;
@@ -52,14 +54,14 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void Cancel(InputAction.CallbackContext value) {
-        if (debouncing || !value.started) {
+        if (_debouncing || !value.started) {
             return;
         }
         bool isDown = value.ReadValueAsButton();
         if (!isDown) {
             return;
         }
-        debouncing = true;
+        StartDebouncing();
         if (MenuSystem.Instance.WantsInput) {
             MenuSystem.Instance.ProcessInput(cancel: true);
             return;
@@ -67,5 +69,19 @@ public class PlayerMovement : MonoBehaviour {
         foreach (var player in Players) {
             player.RequestCancel();
         }
+    }
+
+    private void ProcessDebouncing() {
+        if (!_debouncing) {
+            return;
+        }
+        if (Time.realtimeSinceStartup - _debounceRealtime > DebounceTime) {
+            _debouncing = false;
+        }
+    }
+
+    private void StartDebouncing() {
+        _debouncing = true;
+        _debounceRealtime = Time.realtimeSinceStartup;
     }
 }

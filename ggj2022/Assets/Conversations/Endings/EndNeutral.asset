@@ -16,7 +16,7 @@ MonoBehaviour:
   - Name: 
     Entries:
     - Text: Congrats...
-    - Text: TownB wins...
+    - Text: Everyone wins!!!
     - Text: But do you?
     Options:
     - Text: 
@@ -24,11 +24,15 @@ MonoBehaviour:
       AddStates:
       - next
       RemoveStates: []
-  Config: 'Congrats...
+  Config: 'With the town no longer split or under threat of destruction...
 
-    Everyone wins!!!
+    You
+    look up at the celebration fireworks and realise they are all for you.
 
-    But do you?
+    You
+    lovely person!
+
+    Go you!
 
     [done]
 

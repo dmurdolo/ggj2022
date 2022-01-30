@@ -15,23 +15,15 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Congrats...
-    - Text: TownA wins...
-    - Text: But do you?
+    - Text: "Well done\u2026 You destroyed the town\u2026"
+    - Text: "With lasers!\u2026"
+    - Text: Urm why?
+    - Text: Go back and try again!
     Options:
     - Text: 
       Path: done
       AddStates:
       - next
       RemoveStates: []
-  Config: 'Congrats...
-
-    TownB wins...
-
-    But do you?
-
-    [done]
-
-    {next}
-
-'
+  Config: "Well done\u2026 You destroyed the town\u2026\nWith lasers!\u2026\nUrm
+    why?\nGo back and try again!\n[done]\n{next}\n"
