@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
+  m_Name: CubeEnd
+  m_EditorClassIdentifier: 
+  Paths:
+  - Name: 
+    Entries:
+    - Text: Hi my name is...
+    - Text: I can't remember
+    - Text: But that's ok...
+    - Text: Right?
+    Options:
+    - Text: Yes
+      Path: Yes
+      AddStates:
+      - open
+      RemoveStates: []
+    - Text: No
+      Path: No
+      AddStates: []
+      RemoveStates: []
+    - Text: Maybe
+      Path: Maybe
+      AddStates: []
+      RemoveStates: []
+  - Name: Yes
+    Entries:
+    - Text: Everything's all right.
+    - Text: Thanks for confirming that...}
+    Options: []
+  - Name: No
+    Entries:
+    - Text: Oh, ok.
+    - Text: Thanks for letting me know.
+    - Text: I'll keep that in mind.
+    Options: []
+  Config: 'Thanks for talking to me again.
+
+    Sorry I don''t have anything else
+    to say.
+
+'

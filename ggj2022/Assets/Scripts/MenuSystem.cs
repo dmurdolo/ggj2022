@@ -45,6 +45,19 @@ public class MenuSystem : MonoBehaviour {
             return;
         }
         var option = CurrentPath.Options[selectedOption];
+
+        var storyStateManager = FindObjectOfType<StoryStateManager>();
+        if (option.AddStates != null) {
+            foreach (var state in option.AddStates) {
+                storyStateManager.AddState(state);
+            }
+        }
+        if (option.RemoveStates != null) {
+            foreach (var state in option.RemoveStates) {
+                storyStateManager.RemoveState(state);
+            }
+        }
+
         string nextPathName = option.Path;
         var nextPath = CurrentConversation.Paths.FirstOrDefault(path => path.Name == nextPathName);
         if (nextPath == null) {

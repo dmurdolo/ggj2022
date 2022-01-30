@@ -8,4 +8,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestIsoWorld.unity
     guid: 40989136a878f4b40b106f9cb6242d73
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: adca10592a3965648967ac05d2a2f7ef, type: 2}

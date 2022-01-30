@@ -4,27 +4,43 @@ using UnityEngine;
 
 public class SpiralBlock : MonoBehaviour
 {
-    public Vector3 Destination;
-    public float Speed;
+    public float AnimationLength;
+    public Vector3 DestinationPosition;
+    public Vector3 DestinationScale;
+    public Vector3 DestinationEulerAngles;
+        
     public bool IsAnimating = false;
 
     private float _startTime;
+    public Vector3 StartPosition;
+    private Vector3 StartScale;
+    private Vector3 StartEulerAngles;
 
     void Start()
     {
-        this.Reset();
     }
 
     void Update()
     {
         if (this.IsAnimating)
         {
-            this.transform.position = Vector3.Lerp(this.transform.position, Destination, (Time.time - _startTime) * Speed);
+            float timeElapsed = Time.time - _startTime;
+            float t = timeElapsed / AnimationLength;
 
-            // Stop lerp when it reaches the destination
-            if (this.transform.position == Destination)
+            this.transform.localPosition = Vector3.Lerp(StartPosition, DestinationPosition, t);
+            this.transform.localScale = Vector3.Lerp(StartScale, DestinationScale, t);
+            this.transform.eulerAngles = Vector3.Lerp(StartEulerAngles, DestinationEulerAngles, t);
+
+            // Stop lerp when time limit is over
+            if (timeElapsed >= AnimationLength)
             {
                 this.IsAnimating = false;
+
+                this.transform.localPosition = DestinationPosition;
+                this.transform.localScale = DestinationScale;
+                this.transform.eulerAngles = DestinationEulerAngles;
+
+                //Debug.Log("DONE ANIMATING");
             }
         }
     }
@@ -32,6 +48,10 @@ public class SpiralBlock : MonoBehaviour
     public void Reset()
     {
         _startTime = Time.time;
-        this.IsAnimating = true;
+        IsAnimating = true;
+
+        StartPosition = this.transform.localPosition;
+        StartScale = this.transform.localScale;
+        StartEulerAngles = this.transform.eulerAngles;
     }
 }

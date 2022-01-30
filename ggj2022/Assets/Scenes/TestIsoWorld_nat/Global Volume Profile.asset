@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: Fog
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -88,6 +88,49 @@ MonoBehaviour:
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-6290326660201411058
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddcec8a8eb2d684d833ac8f5d26aebd, type: 3}
+  m_Name: HDShadowSettings
+  m_EditorClassIdentifier: 
+  active: 1
+  maxShadowDistance:
+    m_OverrideState: 1
+    m_Value: 500
+  directionalTransmissionMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  cascadeShadowSplitCount:
+    m_OverrideState: 0
+    m_Value: 4
+  cascadeShadowSplit0:
+    m_OverrideState: 0
+    m_Value: 0.05
+  cascadeShadowSplit1:
+    m_OverrideState: 0
+    m_Value: 0.15
+  cascadeShadowSplit2:
+    m_OverrideState: 0
+    m_Value: 0.3
+  cascadeShadowBorder0:
+    m_OverrideState: 0
+    m_Value: 0
+  cascadeShadowBorder1:
+    m_OverrideState: 0
+    m_Value: 0
+  cascadeShadowBorder2:
+    m_OverrideState: 0
+    m_Value: 0
+  cascadeShadowBorder3:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +151,7 @@ MonoBehaviour:
   - {fileID: 2606918479585508132}
   - {fileID: 4182289372316897015}
   - {fileID: 5110141865457090179}
+  - {fileID: -6290326660201411058}
 --- !u!114 &2606918479585508132
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -120,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -166,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81bcacc415a1f743bfdf703afc52027, type: 3}
   m_Name: GradientSky
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   rotation:
     m_OverrideState: 0
     m_Value: 0
@@ -261,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6b00fcf518bb94a90b408492e07b44, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 1
     m_Value: 1
@@ -437,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d7593b3a9277ac4696b20006c21dde2, type: 3}
   m_Name: VisualEnvironment
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   skyType:
     m_OverrideState: 1
     m_Value: 3

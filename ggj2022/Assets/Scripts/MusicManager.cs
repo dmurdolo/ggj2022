@@ -8,32 +8,39 @@ public class MusicManager : MonoBehaviour
 
     // Test
     public GameObject Player;
-    public GameObject GoodObject;
-    public GameObject BadObject;
 
     void Start()
     {
         // mid, good, bad
         _audioSources = GetComponents<AudioSource>();
-        //Debug.Log(_audioSources.Length);
 
         for (int i = 0; i < _audioSources.Length; i++)
         {
-            //Debug.Log(_audioSources[i].clip.length);
+            Debug.Log(_audioSources[i].clip.length);
         }
     }
 
     void Update()
     {
-        float goodDist = Vector3.Distance(Player.transform.position, GoodObject.transform.position) - 1.5f;
-        float goodVolume = 1 - goodDist;
+        // z: 60 to 14  = good fade
+        // z: 14 to -14 = only midZ = 
+
+        float playerZ = Player.transform.position.z;
+        float goodVolume = 0;
+        float badVolume = 0;
+
+        if (playerZ >= 14)
+        {
+            // Good lands
+            goodVolume = playerZ > 60.0f ? 1.0f : MathUtils.map(playerZ, 14, 60, 0, 1);
+        }
+        else if (playerZ <= -14)
+        {
+            // Bad lands
+            badVolume = playerZ < -60.0f ? 10.0f : MathUtils.map(playerZ, -14, -60, 0, 1);
+        }
+
         _audioSources[1].volume = goodVolume;
-
-        float badDist = Vector3.Distance(Player.transform.position, BadObject.transform.position) - 1.5f;
-        float badVolume = 1 - badDist;
         _audioSources[2].volume = badVolume;
-
-        //Debug.Log((_audioSources[1] as AudioSource).clip.name + ": " + goodDist + " " + goodVolume);
-        //Debug.Log(goodVolume + " / " + badVolume);
     }
 }
