@@ -15,31 +15,32 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Are we done here?
+    - Text: I see you've been going around my town talking to my people, my voters,
+        who elected me to the lofty office of Town Mayor. What have you been saying?
+        Seems to me a person of your apparent sudden popularity might be trying to
+        depose me!
     Options:
-    - Text: Yes
+    - Text: Wouldn't dream of it
       Path: Yes
       AddStates:
       - townAComplete
       RemoveStates: []
-    - Text: No
+    - Text: What if I am?
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
-    Options: []
+    - Text: I wouldn't blame you, this chain is pretty nice
+    Options:
+    - Text: 
+      Path: done
+      AddStates:
+      - townAComplete
+      RemoveStates: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: The people will never vote for you!
     Options: []
   Config: 'I see you''ve been going around my town talking to my people, my voters,
     who elected me to the lofty office of Town Mayor. What have you been saying?
@@ -48,15 +49,13 @@ MonoBehaviour:
 
     [Yes] Wouldn''t dream of it
 
-    {townAComplete}
-
-    [No] What if I
-    am?
+    [No] What if I am?
 
 
     <Yes>
 
-    I wouldn''t blame you, this chain is pretty nice
+    I
+    wouldn''t blame you, this chain is pretty nice
 
     [done]
 

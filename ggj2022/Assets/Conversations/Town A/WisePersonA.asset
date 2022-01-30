@@ -15,35 +15,23 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: "\u2018Allo \u2018allo. I\u2019m checking in on reports of a suspicious
+        type. Mmmm seems to fit the report. So, where were you at 10.30?"
+    - Text: No] *whistles*
     Options:
-    - Text: Yes
+    - Text: I ain't been anywhere!
       Path: Yes
-      AddStates: []
-      RemoveStates: []
-    - Text: No
-      Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: You better be telling me the truth
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: I'm watching you...
     Options: []
   Config: "\u2018Allo \u2018allo. I\u2019m checking in on reports of a suspicious
     type. Mmmm seems to fit the report. So, where were you at 10.30?\n[Yes] I ain't
-    been anywhere!\nNo] *whistles*\n\n<Yes>\nYou better be telling me the truth\n\n<No>\nI'm
+    been anywhere!\n[No] *whistles*\n\n<Yes>\nYou better be telling me the truth\n\n<No>\nI'm
     watching you...\n"
