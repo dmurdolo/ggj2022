@@ -24,7 +24,7 @@ MonoBehaviour:
     - Text: Sure thing Flemy!!
       Path: Yes
       AddStates:
-      - postmasterBComplete
+      - midBComplete
       RemoveStates: []
     - Text: Sounds like a rumour
       Path: No
@@ -38,10 +38,10 @@ MonoBehaviour:
     Entries:
     - Text: Don't come find me when it's too late
     Options: []
-  Config: "Hey!! Flemrick Cofferson\u2019s the name. Have I seen you around here
-    before? Tell ya what, I\u2019ll let you in on something I\u2019ve been telling
-    everyone collecting their post from me today\u2026 there's this giant monster
-    coming\u2026 could come from anywhere, gonna destroy the town! Keep your eyes
+  Config: "Hey!! Flemrick Cofferson\u2019s the name. \nHave I seen you around here
+    before? \nTell ya what, I\u2019ll let you in on something I\u2019ve been telling
+    everyone collecting their post from me today\u2026 \n...there's this giant monster
+    coming\u2026 could come from anywhere\nGonna destroy the town! Keep your eyes
     peeled, and let everyone know. \n[Yes] Sure thing Flemy!!\n{midBComplete}\n[No]
     Sounds like a rumour\n\n<Yes>\nThanks friend!\n\n<No>\nDon't come find me when
     it's too late"

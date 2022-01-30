@@ -15,35 +15,26 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: All this talk of some person in the town plotting like there is a dangerous
+        spy or invader or something kinda doesn't seem like very likely does it?
     Options:
-    - Text: Yes
+    - Text: What if it's me?
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: The walls have ears
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Hahaha, Nope. Hahaha. Can't be
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: You're right. You never know who you're talking to
     Options: []
   Config: "All this talk of some person in the town plotting like there is a dangerous
-    spy or invader or something kinda doesn't seem like very likely does it? \n[Yes]
-    What if it's me?\n[No] The walls have ears\n\n<Yes>\nHahaha, Nope. Hahaha. Can't
-    be\n\n<No>\nYou're right. You never know who you're talking to"
+    spy or invader.\nDoesn't seem like very likely does it? \n[Yes] What if it's
+    me?\n[No] The walls have ears\n\n<Yes>\nHahaha, Nope. Hahaha. Can't be\n\n<No>\nYou're
+    right. You never know who you're talking to"

@@ -15,13 +15,12 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: I hear things are changing back in X, maybe not for the better. Think
-        you could go look for me? Can't leave my post
+    - Text: I hear things are changing in the next town over, maybe not for the better.
+        Think you could go look for me? Can't leave my post
     Options:
     - Text: I'll see what I can find out
       Path: Yes
-      AddStates:
-      - midTierAComplete
+      AddStates: []
       RemoveStates: []
     - Text: It's fine
       Path: No
@@ -35,21 +34,7 @@ MonoBehaviour:
     Entries:
     - Text: Wouldn't be so sure about that *grumbles*
     Options: []
-  Config: 'I hear things are changing in the next town over, maybe not for the better.
-    Think you could go look for me? Can''t leave my post
-
-    [Yes] I''ll see what
-    I can find out
-
-    [No] It''s fine
-
-
-    <Yes>
-
-    Thanks friend!
-
-
-    <No>
-
-    Wouldn''t
-    be so sure about that *grumbles*'
+  Config: "I hear things are changing in the next town over, maybe not for the better.
+    \nThink you could go look for me? Can't leave my post\n[Yes] I'll see what I
+    can find out\n[No] It's fine\n\n<Yes>\nThanks friend!\n\n<No>\nWouldn't be so
+    sure about that *grumbles*"

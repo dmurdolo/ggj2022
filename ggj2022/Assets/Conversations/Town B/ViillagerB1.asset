@@ -15,35 +15,27 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: "Ah mate! Have you heard this? There's this creature right, who wants
+        to destroy the town. I hear it\u2019ll fall from the sky, be super tall and
+        have a million eyes!!"
     Options:
-    - Text: Yes
+    - Text: Sounds plausible
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: Sounds crazy
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Keep watching the skies!!
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: What are you talking about!? I'm not crazy...
     Options: []
-  Config: "Ah mate! Have you heard this? There's this creature right, who wants to
-    destroy the town. I hear it\u2019ll fall from the sky, be super tall and have
-    a million eyes!!\n[Yes] Sounds plausible\n[No] Sounds crazy\n\n<Yes>\nKeep watching
-    the skies!!\n\n<No>\nWhat are you talking about!? I'm not crazy..."
+  Config: "Ah mate! Have you heard this? \nThere's this creature right, who wants
+    to destroy the town. \nI hear it\u2019ll fall from the sky, be super tall and
+    have a million eyes!!\n[Yes] Sounds plausible\n[No] Sounds crazy\n\n<Yes>\nKeep
+    watching the skies!!\n\n<No>\nWhat are you talking about!? I'm not crazy..."
