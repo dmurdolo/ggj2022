@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
-  m_Name: ShopkeeperAP1
+  m_Name: PostmasterB
   m_EditorClassIdentifier: 
   Paths:
   - Name: 
@@ -22,10 +22,17 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates:
+      - postmasterBComplete
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +44,10 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "Hey!! Flemrick Cofferson\u2019s the name. Have I seen you around here
+    before? Tell ya what, I\u2019ll let you in on something I\u2019ve been telling
+    everyone collecting their post from me today\u2026 there's this giant monster
+    coming\u2026 could come from anywhere, gonna destroy the town! Keep your eyes
+    peeled, and let everyone know. \n[Yes] Sure thing Flemy!!\n{postmasterBComplete}\n[No]
+    No\n\n<Yes>\nThanks!\n\n<No>\nOh, ok.\nThanks for letting me know.\nI'll keep
+    that in mind."

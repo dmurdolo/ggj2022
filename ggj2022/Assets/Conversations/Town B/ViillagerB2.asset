@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,21 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
+  Config: 'Wow, nice swirls! Wish I could learn to do that, it''s bound to distract
+    the monster that''s coming this way and I could escape. Do you think that would
+    work?
 
-    I can''t remember
+    [Yes] Thanks!
 
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
+    [No] What?
 
 
     <Yes>
 
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
+    Maybe I should learn
+    how to do it too...
 
 
     <No>
 
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+    Who knows what we''ll need to do...'

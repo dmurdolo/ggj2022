@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
-  m_Name: PostmasterBP1
+  m_Name: SkepticB
   m_EditorClassIdentifier: 
   Paths:
   - Name: 
@@ -43,37 +43,7 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    {postmasterBComplete}
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s
-    all right.
-
-    Thanks for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks
-    for letting me know.
-
-    I''ll keep that in mind.'
+  Config: "So Flemrick told me we should be looking out for some beast or other.
+    He thinks it's going to fall from the sky, but I'm not sure. What do you think?
+    \n[Yes] Could be\n[No] Why?\n\n<Yes>\nCould be something in it!\n\n<No>\nI guess
+    he is a bit unusual"

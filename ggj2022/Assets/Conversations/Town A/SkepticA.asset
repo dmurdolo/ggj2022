@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
-  m_Name: PostmasterAP1
+  m_Name: SkepticA
   m_EditorClassIdentifier: 
   Paths:
   - Name: 
@@ -22,16 +22,10 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
-      AddStates: []
-      RemoveStates: []
     - Text: No
       Path: No
-      AddStates: []
-      RemoveStates: []
     - Text: Maybe
       Path: Maybe
-      AddStates: []
-      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -54,8 +48,6 @@ MonoBehaviour:
     [Yes]
     Yes
 
-    {postmasterAComplete}
-
     [No] No
 
     [Maybe] Maybe
@@ -63,17 +55,17 @@ MonoBehaviour:
 
     <Yes>
 
-    Everything''s
-    all right.
+    Everything''s all right.
 
-    Thanks for confirming that...
+    Thanks
+    for confirming that...
 
 
     <No>
 
     Oh, ok.
 
-    Thanks
-    for letting me know.
+    Thanks for letting me know.
 
-    I''ll keep that in mind.'
+    I''ll
+    keep that in mind.'
