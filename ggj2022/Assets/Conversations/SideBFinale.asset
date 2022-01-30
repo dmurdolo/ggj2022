@@ -36,35 +36,32 @@ MonoBehaviour:
     Entries:
     - Text: Everything's all right.
     - Text: Thanks for confirming that...
-    Options: []
+    Options:
+    - Text: 
+      Path: done
+      AddStates:
+      - go_to_end_b
+      RemoveStates: []
   - Name: No
     Entries:
     - Text: Oh, ok.
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
+  Config: 'It''s YOU, thy foul glowing beast!!! Argh! The prophecy!! Lordy, the prophecy!!
+    It''s all true! Destroy the doubters, I beg thee, let us be the ones who survive
+    the end times and see out the fall of this town!! WE are the ones that know!!....
 
     [Yes]
-    Yes
+    I am your end!
 
-    [No] No
-
-    [Maybe] Maybe
+    [No] I''m not so sure
 
 
     <Yes>
 
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
+    Mwahahaha, I knew
+    it! Unleash your squiggly powers. Fight with me now to wipe out the non-believers!!!
 
     [done]
 
@@ -73,9 +70,5 @@ MonoBehaviour:
 
     <No>
 
-    Oh, ok.
-
-    Thanks
-    for letting me know.
-
-    I''ll keep that in mind.'
+    You
+    can''t fool us!'

@@ -18,29 +18,28 @@ MonoBehaviour:
     - Text: Thanks for talking to me again.
     - Text: Sorry I don't have anything else to say.
     Options:
+    - Text: Yes
+      Path: Yes
+      AddStates: []
+      RemoveStates: []
+    - Text: No
+      Path: No
+      AddStates: []
+      RemoveStates: []
+  - Name: Yes
+    Entries: []
+    Options:
     - Text: 
       Path: done
       AddStates:
       - go_to_end_neutral
       RemoveStates: []
-  Config: 'Thanks for talking to me again.
-
-    Sorry I don''t have anything else
-    to say.
-
-    [Yes] Yes
-
-    [No] No
-
-
-    <Yes>
-
-    [done]
-
-    {go_to_end_neutral}
-
-
-    <No>
-
-    Well
-    then... If you change your mind.'
+  - Name: No
+    Entries:
+    - Text: Well then... If you change your mind.
+    Options: []
+  Config: "The Orb: My dude, how\u2019s it going?! Long time no see! What\u2019s
+    been going on, how are these guys. A fun bunch, right? \n[Yes] They're a bit
+    awkward\n[No] Not that bothered\n\n<Yes>\nThey really should just talk to one
+    another. Shall we try again?\n[done]\n{go_to_end_neutral}\n\n<No>\nWell, it's
+    your opinion"
