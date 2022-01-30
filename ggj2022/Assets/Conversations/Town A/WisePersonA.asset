@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,7 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "\u2018Allo \u2018allo. I\u2019m checking in on reports of a suspicious
+    type. Mmmm seems to fit the report. So, where were you at 10.30?\n[Yes] I ain't
+    been anywhere!\nNo] *whistles*\n\n<Yes>\nYou better be telling me the truth\n\n<No>\nI'm
+    watching you...\n"

@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,9 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "So many vandals! Criminals! Here to ruin this beautiful town and it's
+    beautiful curling blocks! I\u2019ve seen people grouping together, whispering.
+    It worries me! Someone must be influencing them to crowd like this, it\u2019s
+    a conspiracy to destroy this place! \n[Yes] Are you sure?\n[No] Shush they'll
+    hear\n\n<Yes>\nIt alway starts out like this, then we're all doomed!\n\n<No>\nYou're
+    right, I don't let them know you are onto them! "

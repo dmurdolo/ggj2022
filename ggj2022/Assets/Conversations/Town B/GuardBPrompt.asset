@@ -15,34 +15,23 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: You should really go visit the other town...
     Options:
-    - Text: Yes
+    - Text: Sure thing
       Path: Yes
-      AddStates:
-      - openGateB
-      RemoveStates: []
-    - Text: No
-      Path: No
       AddStates: []
       RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
+    - Text: Why?
+      Path: No
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Have a good time
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: You would thank me when you get there...
     Options: []
   Config: 'You should really go visit the other town...
 

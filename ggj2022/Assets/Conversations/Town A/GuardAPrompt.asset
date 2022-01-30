@@ -41,17 +41,15 @@ MonoBehaviour:
     [Yes] I''ll see what
     I can find out
 
-    {midTierAComplete}
-
     [No] It''s fine
 
 
     <Yes>
 
-    Thanks
-    friend!
+    Thanks friend!
 
 
     <No>
 
-    Wouldn''t be so sure about that *grumbles*'
+    Wouldn''t
+    be so sure about that *grumbles*'
