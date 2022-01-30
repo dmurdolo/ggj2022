@@ -17,10 +17,13 @@ MonoBehaviour:
     Entries:
     - Text: "\u2018Allo \u2018allo. I\u2019m checking in on reports of a suspicious
         type. Mmmm seems to fit the report. So, where were you at 10.30?"
-    - Text: No] *whistles*
     Options:
     - Text: I ain't been anywhere!
       Path: Yes
+      AddStates: []
+      RemoveStates: []
+    - Text: '*whistles*'
+      Path: No
       AddStates: []
       RemoveStates: []
   - Name: Yes
@@ -32,6 +35,6 @@ MonoBehaviour:
     - Text: I'm watching you...
     Options: []
   Config: "\u2018Allo \u2018allo. I\u2019m checking in on reports of a suspicious
-    type. Mmmm seems to fit the report. So, where were you at 10.30?\n[Yes] I ain't
+    type. \nMmmm seems to fit the report. So, where were you at 10.30?\n[Yes] I ain't
     been anywhere!\n[No] *whistles*\n\n<Yes>\nYou better be telling me the truth\n\n<No>\nI'm
     watching you...\n"

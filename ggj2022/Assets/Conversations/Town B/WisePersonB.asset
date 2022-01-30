@@ -15,37 +15,31 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: "There is a prophecy ....\u201DOut of the storm, the crowd, the swarm,
+        the tempest;  a being shall emerge and there shall they fall within our very
+        streets! With their hands, the power of destruction. To rip apart the very
+        fabric of our gooey walls!\u201D"
     Options:
-    - Text: Yes
+    - Text: Go on
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: Ridiculous
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: "\u2026\u201Dand those that follow this truth, they are the ones that
+        know!\u201D"
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: I suppose we shall see
     Options: []
-  Config: "There is a prophecy ....\u201DOut of the storm, the crowd, the swarm,
-    the tempest;  a being shall emerge and there shall they fall within our very
-    streets! With their hands, the power of destruction. To rip apart the very fabric
-    of our gooey walls!\u201D \n[Yes] Go on\n[No] Ridiculous\n\n<Yes>\n\u2026\u201Dand
+  Config: "There is a prophecy ...\n....\u201DOut of the storm, the crowd, the swarm,
+    the tempest;  a being shall emerge...\n...and there shall they fall within our
+    very streets! With their hands, the power of destruction. ,,,\n...To rip apart
+    the very fabric of our gooey walls!\u201D \n[Yes] Go on\n[No] Ridiculous\n\n<Yes>\n\u2026\u201Dand
     those that follow this truth, they are the ones that know!\u201D\n\n<No>\nI suppose
     we shall see"

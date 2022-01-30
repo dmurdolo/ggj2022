@@ -15,49 +15,27 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: Wow, nice swirls! Wish I could learn to do that, it's bound to distract
+        the monster that's coming this way and I could escape. Do you think that
+        would work?
     Options:
-    - Text: Yes
+    - Text: Thanks!
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: What?
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Maybe I should learn how to do it too...
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: Who knows what we'll need to do...
     Options: []
-  Config: 'Wow, nice swirls! Wish I could learn to do that, it''s bound to distract
-    the monster that''s coming this way and I could escape. Do you think that would
-    work?
-
-    [Yes] Thanks!
-
-    [No] What?
-
-
-    <Yes>
-
-    Maybe I should learn
-    how to do it too...
-
-
-    <No>
-
-    Who knows what we''ll need to do...'
+  Config: "Wow, nice swirls! \nWish I could learn to do that, it's bound to distract
+    the monster that's coming this way and I could escape. \nDo you think that would
+    work?\n[Yes] Thanks!\n[No] What?\n\n<Yes>\nMaybe I should learn how to do it
+    too...\n\n<No>\nWho knows what we'll need to do..."

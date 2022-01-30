@@ -22,8 +22,7 @@ MonoBehaviour:
     Options:
     - Text: Wouldn't dream of it
       Path: Yes
-      AddStates:
-      - townAComplete
+      AddStates: []
       RemoveStates: []
     - Text: What if I am?
       Path: No
@@ -42,27 +41,9 @@ MonoBehaviour:
     Entries:
     - Text: The people will never vote for you!
     Options: []
-  Config: 'I see you''ve been going around my town talking to my people, my voters,
-    who elected me to the lofty office of Town Mayor. What have you been saying?
-    Seems to me a person of your apparent sudden popularity might be trying to depose
-    me!
-
-    [Yes] Wouldn''t dream of it
-
-    [No] What if I am?
-
-
-    <Yes>
-
-    I
-    wouldn''t blame you, this chain is pretty nice
-
-    [done]
-
-    {townAComplete}
-
-
-    <No>
-
-    The
-    people will never vote for you!'
+  Config: "I see you've been going around my town talking to my people.\nMy voters,
+    who elected me to the lofty office of Town Mayor. \nWhat have you been saying?
+    \nSeems to me a person of your apparent sudden popularity might be trying to
+    depose me!\n[Yes] Wouldn't dream of it\n[No] What if I am?\n\n<Yes>\nI wouldn't
+    blame you, this chain is pretty nice\n[done]\n{townAComplete}\n\n<No>\nThe people
+    will never vote for you!"

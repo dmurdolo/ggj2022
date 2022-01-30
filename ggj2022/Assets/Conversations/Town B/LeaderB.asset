@@ -23,8 +23,7 @@ MonoBehaviour:
     Options:
     - Text: It is you?!
       Path: Yes
-      AddStates:
-      - townBComplete
+      AddStates: []
       RemoveStates: []
     - Text: '*backs away slowly*'
       Path: No
@@ -33,15 +32,20 @@ MonoBehaviour:
   - Name: Yes
     Entries:
     - Text: What an honour for you  to meet a man of such great insight!
-    Options: []
+    Options:
+    - Text: 
+      Path: done
+      AddStates:
+      - townBComplete
+      RemoveStates: []
   - Name: No
     Entries:
     - Text: Unbelievers are not welcome here!
     Options: []
-  Config: "Hmmm what have we here?....Never seen you before. But\u2026 Something
-    seems very familiar about you, Like I\u2019ve seen you in one of my visions.
-    Have you read of my Prophecy!! It\u2019s true I tell you I see the signs of the
-    havoc that will be unleashed upon us. I see the flame of your belief flickering
+  Config: "Hmmm what have we here?....Never seen you before. \nBut\u2026 Something
+    seems very familiar about you.\nLike I\u2019ve seen you in one of my visions.
+    Have you read of my Prophecy!! \nIt\u2019s true I tell you I see the signs of
+    the havoc that will be unleashed upon us. \nI see the flame of your belief flickering
     in your eyes! \n[Yes] It is you?!\n[No] *backs away slowly*\n\n<Yes>\nWhat an
     honour for you  to meet a man of such great insight!\n[done]\n{townBComplete}\n\n<No>\nUnbelievers
     are not welcome here!"

@@ -15,35 +15,27 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: So Flemrick told me we should be looking out for some beast or other.
+        He thinks it's going to fall from the sky, but I'm not sure. What do you
+        think?
     Options:
-    - Text: Yes
+    - Text: Could be
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: Why?
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: Could be something in it!
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: I guess he is a bit unusual
     Options: []
-  Config: "So Flemrick told me we should be looking out for some beast or other.
-    He thinks it's going to fall from the sky, but I'm not sure. What do you think?
+  Config: "So Flemrick told me we should be looking out for some beast or other.\nHe
+    thinks it's going to fall from the sky, but I'm not sure. \nWhat do you think?
     \n[Yes] Could be\n[No] Why?\n\n<Yes>\nCould be something in it!\n\n<No>\nI guess
     he is a bit unusual"

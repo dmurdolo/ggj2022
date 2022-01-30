@@ -15,37 +15,30 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: "So many vandals! Criminals! Here to ruin this beautiful town and it's
+        beautiful curling blocks! I\u2019ve seen people grouping together, whispering.
+        It worries me! Someone must be influencing them to crowd like this, it\u2019s
+        a conspiracy to destroy this place!"
     Options:
-    - Text: Yes
+    - Text: Are you sure?
       Path: Yes
       AddStates: []
       RemoveStates: []
-    - Text: No
+    - Text: Shush they'll hear
       Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
       AddStates: []
       RemoveStates: []
   - Name: Yes
     Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...
+    - Text: It alway starts out like this, then we're all doomed!
     Options: []
   - Name: No
     Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
+    - Text: You're right, I don't let them know you are onto them!
     Options: []
   Config: "So many vandals! Criminals! Here to ruin this beautiful town and it's
-    beautiful curling blocks! I\u2019ve seen people grouping together, whispering.
-    It worries me! Someone must be influencing them to crowd like this, it\u2019s
+    beautiful curling blocks! \nI\u2019ve seen people grouping together, whispering.
+    \nIt worries me! \nSomeone must be influencing them to crowd like this, it\u2019s
     a conspiracy to destroy this place! \n[Yes] Are you sure?\n[No] Shush they'll
     hear\n\n<Yes>\nIt alway starts out like this, then we're all doomed!\n\n<No>\nYou're
     right, I don't let them know you are onto them! "
