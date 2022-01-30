@@ -169,7 +169,7 @@ public class SpiralBehaviour : MonoBehaviour
 
             // Magic numbers for offsettin the cube at position (0, 1.5, 5)
             Vector3 newPosition = new Vector3(0,
-                Mathf.Cos(rad) * radius + OriginalPosition.y + 0.75f,
+                Mathf.Cos(rad) * radius + OriginalPosition.y + 1.75f,
                 Mathf.Sin(rad) * radius + OriginalPosition.z - 3.2f);
             
             spiralBlock.AnimationLength = (currentIteration + 1) * 0.2f;   // 1 - 10
