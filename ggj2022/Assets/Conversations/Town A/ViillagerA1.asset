@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -37,35 +43,8 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Hi my name is...
-
-    I can''t remember
-
-    But that''s ok...
-
-    Right?
-
-    [Yes]
-    Yes
-
-    [No] No
-
-    [Maybe] Maybe
-
-
-    <Yes>
-
-    Everything''s all right.
-
-    Thanks
-    for confirming that...
-
-
-    <No>
-
-    Oh, ok.
-
-    Thanks for letting me know.
-
-    I''ll
-    keep that in mind.'
+  Config: "Villager: Ah mate! Have you heard this? There's this creature right, who
+    wants to destroy the town. I hear it\u2019ll fall from the sky, be super tall
+    and have a million eyes!!\n[Yes] I agree\n[No] Don't think so\n\n<Yes>\nYou:
+    Keep watching the skies!!\n\n<No>\nYou: What are you talking about!? Where would
+    it fall from? You're better off worrying about people in the real world!"

@@ -53,7 +53,6 @@ public class StoryStateManager : MonoBehaviour {
         }
         States.Add(state);
         _statesSet.Add(state);
-
         if (_listeners.TryGetValue(state, out List<ListenerData> listeners)) {
             foreach (var listener in listeners) {
                 if (listener.Component) {
