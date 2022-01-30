@@ -106,7 +106,7 @@ public class SpiralBehaviour : MonoBehaviour
     // Spiral in
     private void AnimateIn()
     {
-        Debug.Log("IN");
+        //Debug.Log("IN");
 
         _isAnimating = true;
         _isAnimatingIn = true;
@@ -130,7 +130,7 @@ public class SpiralBehaviour : MonoBehaviour
     // Spiral out
     private void AnimateOut()
     {
-        Debug.Log("OUT");
+        //Debug.Log("OUT");
 
         _isAnimating = true;
         _isAnimatingIn = false;
