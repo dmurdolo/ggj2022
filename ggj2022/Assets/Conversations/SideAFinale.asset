@@ -22,10 +22,16 @@ MonoBehaviour:
     Options:
     - Text: Yes
       Path: Yes
+      AddStates: []
+      RemoveStates: []
     - Text: No
       Path: No
+      AddStates: []
+      RemoveStates: []
     - Text: Maybe
       Path: Maybe
+      AddStates: []
+      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
@@ -60,12 +66,16 @@ MonoBehaviour:
     Thanks
     for confirming that...
 
+    [done]
+
+    {go_to_end_a}
+
 
     <No>
 
     Oh, ok.
 
-    Thanks for letting me know.
+    Thanks
+    for letting me know.
 
-    I''ll
-    keep that in mind.'
+    I''ll keep that in mind.'
