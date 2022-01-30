@@ -29,14 +29,10 @@ MonoBehaviour:
       Path: No
       AddStates: []
       RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
-      AddStates: []
-      RemoveStates: []
   - Name: Yes
     Entries:
     - Text: Everything's all right.
-    - Text: Thanks for confirming that...}
+    - Text: Thanks for confirming that...
     Options: []
   - Name: No
     Entries:
@@ -44,4 +40,39 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: There was a time...
+  Config: 'Hi my name is...
+
+    I can''t remember
+
+    But that''s ok...
+
+    Right?
+
+    [Yes]
+    Yes
+
+    {open}
+
+    [No] No
+
+
+    <Yes>
+
+    Everything''s all right.
+
+    Thanks
+    for confirming that...
+
+    [placeholder]
+
+    {go_to_endgame}
+
+
+    <No>
+
+    Oh,
+    ok.
+
+    Thanks for letting me know.
+
+    I''ll keep that in mind.'
