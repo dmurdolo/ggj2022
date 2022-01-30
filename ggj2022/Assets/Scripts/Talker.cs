@@ -1,21 +1,47 @@
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Talker : MonoBehaviour {
-    public Conversation Conversation;
+    [Serializable]
+    public class Branch {
+        public string State;
+        public Conversation Conversation;
+    }
+
+    public List<Branch> Branches = new List<Branch>();
 
     public bool DebugStart = false;
     public bool IsSelectedByPlayer = false;
 
     public void RequestStartConversation() {
-        FindObjectOfType<MenuSystem>().StartConversation(Conversation);
+        StoryStateManager stateManager = FindObjectOfType<StoryStateManager>();
+        Conversation conversation = null;
+        foreach (Branch branch in Branches) {
+            if (stateManager.HasState(branch.State)) {
+                conversation = branch.Conversation;
+                break;
+            }
+        }
+        if (!conversation) {
+            foreach (Branch branch in Branches) {
+                if (string.IsNullOrEmpty(branch.State)) {
+                    conversation = branch.Conversation;
+                    break;
+                }
+            }
+        }
+        if (conversation) {
+            FindObjectOfType<MenuSystem>().StartConversation(conversation);
+        }
     }
 
     protected void Update() {
         if (DebugStart) {
             DebugStart = false;
-            FindObjectOfType<MenuSystem>().StartConversation(Conversation);
+            RequestStartConversation();
         }
     }
 

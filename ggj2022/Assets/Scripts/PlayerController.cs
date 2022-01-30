@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour {
     public void RequestAccept() {
         if (SelectedTalker) {
             SelectedTalker.RequestStartConversation();
+            if (MenuSystem.Instance.IsInMenu) {
+                RequestedMoveDelta = Vector2.zero;
+            }
         }
     }
 
