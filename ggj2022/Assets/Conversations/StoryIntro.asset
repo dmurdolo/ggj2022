@@ -23,13 +23,14 @@ MonoBehaviour:
         Anon"
     - Text: "I\u2019m sending you on a mission\u2026 see what's going on with this
         town. It's odd\u2026"
-    - Text: "There\u2019s bizarre rumours floating around about the place being destroyed"
+    - Text: "There\u2019s bizarre rumours floating around about the place being destroyed."
     - Text: No one seems to have made up their mind about it, but some are starting
         to take sides.
     - Text: Some are pointing fingers, some grouping together behind an apparent
         prophecy.
     - Text: "Explore and maybe see if you can\u2019t calm them down abit. I would
-        be nice if they could live harmony again, you know.. the two sides intertwined."
+        be nice if they could live harmony again, you know.."
+    - Text: The two sides intertwined.
     - Text: "But hey\u2026 there might be something in the speculation!!!"
     - Text: Peace- The Orb
     Options:
@@ -39,13 +40,13 @@ MonoBehaviour:
       - next
       RemoveStates: []
   Config: "\u201DOut of the storm, the crowd, the swarm, the tempest;  a being shall
-    emerge and there shall they fall within our very streets! \nWith their hands,
-    the power of destruction. To rip apart the very fabric of our gooey walls! \nThose
-    that follow this truth, they are the ones that know!\u201D - Prophecy, Anon\r\nI\u2019m
-    sending you on a mission\u2026 see what's going on with this town. It's odd\u2026
-    \nThere\u2019s bizarre rumours floating around about the place being destroyed.\nNo
-    one seems to have made up their mind about it, but some are starting to take
-    sides. \nSome are pointing fingers, some grouping together behind an apparent
-    prophecy. \nExplore and maybe see if you can\u2019t calm them down abit. I would
-    be nice if they could live harmony again, you know.. \nThe two sides intertwined.\nBut
-    hey\u2026 there might be something in the speculation!!!\r\n Peace- The Orb\r\n[done]\n{next}"
+    emerge and there shall they fall within our very streets!\nWith their hands,
+    the power of destruction. To rip apart the very fabric of our gooey walls!\nThose
+    that follow this truth, they are the ones that know!\u201D - Prophecy, Anon\nI\u2019m
+    sending you on a mission\u2026 see what's going on with this town. It's odd\u2026\nThere\u2019s
+    bizarre rumours floating around about the place being destroyed.\nNo one seems
+    to have made up their mind about it, but some are starting to take sides.\nSome
+    are pointing fingers, some grouping together behind an apparent prophecy.\nExplore
+    and maybe see if you can\u2019t calm them down a bit. It would be nice if they
+    could live in harmony again, you know..\nThe two sides intertwined.\nBut hey...
+    there might be something in the speculation!!!\n Peace- The Orb\n\n[done]\n{next}\n"

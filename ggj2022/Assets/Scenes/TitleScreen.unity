@@ -291,6 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153475772}
   - component: {fileID: 153475771}
+  - component: {fileID: 153475773}
   m_Layer: 0
   m_Name: TitleMenuMusic
   m_TagString: Untagged
@@ -305,7 +306,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153475770}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5e09f151c64375b44990eaed374f153d, type: 3}
@@ -409,6 +410,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153475773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153475770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8961b79dde47c4700a095ac8d24161f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Component: {fileID: 153475771}
+  Delay: 1.5
+  CurrentTime: 0
 --- !u!1 &355371972
 GameObject:
   m_ObjectHideFlags: 0
