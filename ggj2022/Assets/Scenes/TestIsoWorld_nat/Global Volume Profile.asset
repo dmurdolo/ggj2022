@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: Fog
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -88,6 +88,40 @@ MonoBehaviour:
   directionalLightsOnly:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &-8604228535629285908
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b24b200358312b4fa1004e2431c2f1f, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.4008016}
+  midtones:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0.02004008}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.20040083}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &-6290326660201411058
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -152,6 +186,7 @@ MonoBehaviour:
   - {fileID: 4182289372316897015}
   - {fileID: 5110141865457090179}
   - {fileID: -6290326660201411058}
+  - {fileID: -8604228535629285908}
 --- !u!114 &2606918479585508132
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -164,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -243,7 +278,7 @@ MonoBehaviour:
     m_Value: 0
   top:
     m_OverrideState: 1
-    m_Value: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   middle:
     m_OverrideState: 1
     m_Value: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
@@ -265,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f086a068d4c5889438831b3ae9afc11c, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
     m_Value: 4
@@ -289,10 +324,10 @@ MonoBehaviour:
     m_Value: 1
   lutTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 8534537815417165676, guid: 4d6434d3c43ceea4c95435d28962e853, type: 3}
   lutContribution:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.418
 --- !u!114 &5110141865457090179
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -305,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6b00fcf518bb94a90b408492e07b44, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   type:
     m_OverrideState: 1
     m_Value: 1
@@ -345,7 +380,7 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -2.43
   limitMin:
     m_OverrideState: 0
     m_Value: -1

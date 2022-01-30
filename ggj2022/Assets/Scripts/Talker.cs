@@ -13,8 +13,13 @@ public class Talker : MonoBehaviour {
 
     public List<Branch> Branches = new List<Branch>();
 
+    public bool AutoTrigger = false;
+    public float AutoTriggerDelay = 5.0f;
     public bool DebugStart = false;
     public bool IsSelectedByPlayer = false;
+
+    private bool _autoTriggered = false;
+    private float _autoTriggerTime = 0.0f;
 
     public void RequestStartConversation() {
         StoryStateManager stateManager = FindObjectOfType<StoryStateManager>();
@@ -37,7 +42,9 @@ public class Talker : MonoBehaviour {
             FindObjectOfType<MenuSystem>().StartConversation(conversation);
             
             Transform bubble = this.transform.Find("Container/SpeechBubble");
-            bubble.GetComponent<AudioSource>().Stop();
+            if (bubble) {
+                bubble.GetComponent<AudioSource>().Stop();
+            }
 
             AudioSource audioSource = this.GetComponent<AudioSource>();
             if (audioSource)
@@ -56,6 +63,16 @@ public class Talker : MonoBehaviour {
             DebugStart = false;
             RequestStartConversation();
         }
+
+        if (AutoTrigger && !_autoTriggered) {
+            if (!_autoTriggered) {
+                _autoTriggerTime += Time.deltaTime;
+                if (_autoTriggerTime >= AutoTriggerDelay) {
+                    _autoTriggered = true;
+                    RequestStartConversation();
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -65,12 +82,16 @@ public class Talker : MonoBehaviour {
         }
         
         Transform bubble = this.transform.Find("Container/SpeechBubble");
-        bubble.GetComponent<AudioSource>().Play();
-        bubble.localScale = new Vector3(200, 200, 200);
-        Bob bob = bubble.GetComponent<Bob>();
-        bob.Speed = 15.0f;
-        bob.Distance = 0.1f;
-        bob.Offset = 1;
+        if (bubble) {
+            bubble.GetComponent<AudioSource>().OrNull()?.Play();
+            bubble.localScale = new Vector3(200, 200, 200);
+            Bob bob = bubble.GetComponent<Bob>();
+            if (bob) {
+                bob.Speed = 15.0f;
+                bob.Distance = 0.1f;
+                bob.Offset = 1;
+            }
+        }
 
         player.AddTalker(this);
     }

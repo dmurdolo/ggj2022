@@ -15,38 +15,32 @@ MonoBehaviour:
   Paths:
   - Name: 
     Entries:
-    - Text: Hi my name is...
-    - Text: I can't remember
-    - Text: But that's ok...
-    - Text: Right?
+    - Text: Thanks for talking to me again.
+    - Text: Sorry I don't have anything else to say.
     Options:
-    - Text: Yes
-      Path: Yes
+    - Text: 
+      Path: done
       AddStates:
-      - open
+      - go_to_end_neutral
       RemoveStates: []
-    - Text: No
-      Path: No
-      AddStates: []
-      RemoveStates: []
-    - Text: Maybe
-      Path: Maybe
-      AddStates: []
-      RemoveStates: []
-  - Name: Yes
-    Entries:
-    - Text: Everything's all right.
-    - Text: Thanks for confirming that...}
-    Options: []
-  - Name: No
-    Entries:
-    - Text: Oh, ok.
-    - Text: Thanks for letting me know.
-    - Text: I'll keep that in mind.
-    Options: []
   Config: 'Thanks for talking to me again.
 
     Sorry I don''t have anything else
     to say.
 
-'
+    [Yes] Yes
+
+    [No] No
+
+
+    <Yes>
+
+    [done]
+
+    {go_to_end_neutral}
+
+
+    <No>
+
+    Well
+    then... If you change your mind.'
