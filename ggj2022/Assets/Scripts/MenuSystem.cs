@@ -34,9 +34,9 @@ public class MenuSystem : MonoBehaviour {
             ConversationUI.gameObject.transform.parent = this.gameObject.transform;
             ConversationUI.gameObject.SetActive(false);
 
-            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(0));
-            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(1));
-            ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(2));
+            // ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(0));
+            // ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(1));
+            // ConversationUI.Option1.onClick.AddListener(() => DoSelectOption(2));
         }
         StopConversation();
     }
