@@ -161,7 +161,7 @@ public class SpiralBehaviour : MonoBehaviour
             float radius = (MaxIterations - currentIteration) * 0.25f;   // 10, 9, 8, ...
             float rad = (MaxIterations - currentIteration) * 20 * Mathf.Deg2Rad;
 
-            // Offset if facing South +0.75f, -2.2f
+            // Magic numbers for offsettin the cube at position (0, 1.5, 5)
             Vector3 newPosition = new Vector3(0,
                 Mathf.Cos(rad) * radius + OriginalPosition.y + 0.75f,
                 Mathf.Sin(rad) * radius + OriginalPosition.z - 3.2f);

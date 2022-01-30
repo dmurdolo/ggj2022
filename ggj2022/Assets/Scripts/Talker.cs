@@ -62,6 +62,7 @@ public class Talker : MonoBehaviour {
         }
         
         Transform bubble = this.transform.Find("Container/SpeechBubble");
+        bubble.GetComponent<AudioSource>().Play();
         bubble.localScale = new Vector3(200, 200, 200);
         Bob bob = bubble.GetComponent<Bob>();
         bob.Speed = 15.0f;
@@ -78,6 +79,7 @@ public class Talker : MonoBehaviour {
         }
 
         Transform bubble = this.transform.Find("Container/SpeechBubble");
+        bubble.GetComponent<AudioSource>().Stop();
         bubble.localScale = new Vector3(150, 150, 150);
         Bob bob = bubble.GetComponent<Bob>();
         bob.Speed = 1.0f;
