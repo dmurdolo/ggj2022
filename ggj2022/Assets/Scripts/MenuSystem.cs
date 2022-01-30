@@ -122,7 +122,8 @@ public class MenuSystem : MonoBehaviour {
         if (accept == true) {
             if (IsInTitleMenu)
             {
-                Debug.Log("Close Menu");
+                Debug.LogError("Close Title Menu");
+                GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
                 FindObjectOfType<StoryStateManager>().AddState("next");
             }
             else
@@ -132,6 +133,11 @@ public class MenuSystem : MonoBehaviour {
                 } else {
                     AdvanceConversation();
                 }
+            }
+        } else if (cancel == true){ 
+            if (IsInTitleMenu)
+            {
+                Application.Quit();
             }
         }
     }
