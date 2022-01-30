@@ -86,7 +86,7 @@ public class SpiralBehaviour : MonoBehaviour
             
             newGameObject.GetComponent<Bob>().enabled = false;
 
-            newGameObject.transform.position = this.transform.position;
+            newGameObject.transform.position = OriginalPosition;
 
             //
             SpiralBlock spiralBlock = newGameObject.AddComponent<SpiralBlock>() as SpiralBlock;
@@ -160,9 +160,11 @@ public class SpiralBehaviour : MonoBehaviour
 
             float radius = (MaxIterations - currentIteration) * 0.25f;   // 10, 9, 8, ...
             float rad = (MaxIterations - currentIteration) * 20 * Mathf.Deg2Rad;
+
+            // Offset if facing South +0.75f, -2.2f
             Vector3 newPosition = new Vector3(0,
                 Mathf.Cos(rad) * radius + OriginalPosition.y + 0.75f,
-                Mathf.Sin(rad) * radius + this.transform.position.z - 2.2f);
+                Mathf.Sin(rad) * radius + OriginalPosition.z - 3.2f);
             
             spiralBlock.AnimationLength = (currentIteration + 1) * 0.2f;   // 1 - 10
             spiralBlock.transform.position = OriginalPosition;   // reset position
