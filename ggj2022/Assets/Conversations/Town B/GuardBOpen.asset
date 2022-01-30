@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d9523dda96bd4b7ebbd2d1971575f6a, type: 3}
-  m_Name: GuardA
+  m_Name: GuardBOpen
   m_EditorClassIdentifier: 
   Paths:
   - Name: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     - Text: Yes
       Path: Yes
       AddStates:
-      - openGateA
+      - openGateB
       RemoveStates: []
     - Text: No
       Path: No
@@ -44,22 +44,22 @@ MonoBehaviour:
     - Text: Thanks for letting me know.
     - Text: I'll keep that in mind.
     Options: []
-  Config: 'Looks like you''ve spoken to the others, shall I open the gate?
+  Config: 'You''ve visited our neighbours, good. I''ll open the gate.
 
     [Yes]
-    Please do
+    Thanks
 
-    {openGateA}
+    {openGateB}
 
     [No] Not yet
 
 
     <Yes>
 
-    In you go
+    Welcome to the castle
 
 
     <No>
 
-    You
-    know where to find me'
+    Oh,
+    ok. Let me know when'
