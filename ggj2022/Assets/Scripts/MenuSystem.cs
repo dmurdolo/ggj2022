@@ -14,8 +14,10 @@ public class MenuSystem : MonoBehaviour {
     public int DebugSelectOption = -1;
 
     public bool IsInMenu => CurrentConversation != null || IsInTitleMenu;
+    public bool WantsInput => IsInMenu || IsInCredits;
     
     public bool IsInTitleMenu;
+    public bool IsInCredits;
 
     public int HighlightedOption = 0;
 
@@ -174,13 +176,10 @@ public class MenuSystem : MonoBehaviour {
             }
         }
         if (accept == true) {
-            if (IsInTitleMenu)
-            {
+            if (IsInTitleMenu || IsInCredits) {
                 GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
                 FindObjectOfType<StoryStateManager>().AddState("next");
-            }
-            else
-            {
+            } else {
                 if (ShowEntryOptions) {
                     DoSelectOption(HighlightedOption);
                 } else {
@@ -188,8 +187,7 @@ public class MenuSystem : MonoBehaviour {
                 }
             }
         } else if (cancel == true){ 
-            if (IsInTitleMenu)
-            {
+            if (IsInTitleMenu || IsInCredits) {
                 Application.Quit();
             }
         }

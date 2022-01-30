@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody Body;
     public Camera Camera;
     public Vector2 RequestedMoveDelta = Vector2.zero;
+    public Vector2 ForcedMoveDeltaBias = Vector2.zero;
 
     public List<Talker> TalkersInRange = new List<Talker>();
     public Talker SelectedTalker;
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void FixedUpdate() {
-        Vector2 requested = RequestedMoveDelta;
+        Vector2 requested = RequestedMoveDelta + ForcedMoveDeltaBias;
         Vector3 cameraForward = Camera.transform.forward;
         Vector3 cameraRight = Camera.transform.right;
         cameraForward.y = 0.0f;
