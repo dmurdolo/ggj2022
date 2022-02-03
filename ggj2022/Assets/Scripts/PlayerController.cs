@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void RequestCancel() {
+        MenuSystem.Instance.OpenResolutionDialog();
     }
 
     public void Update() {

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 
     protected void Start() {
         Players = FindObjectsOfType<PlayerController>();
+        StartDebouncing();
     }
 
     protected void Update() {
@@ -23,9 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Move(InputAction.CallbackContext value) {
         if (MenuSystem.Instance.IsInMenu) {
-            if (value.started) {
-                MenuSystem.Instance.ProcessInput(mainAxis: value.ReadValue<Vector2>());
-            }
+            MenuSystem.Instance.ProcessInput(mainAxis: value.ReadValue<Vector2>());
             return;
         }
         moveVal = value.ReadValue<Vector2>();

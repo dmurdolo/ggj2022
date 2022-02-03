@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Value: 1
   m_SampleCount:
     m_OverrideState: 0
-    m_Value: 8
+    m_Value: 4
 --- !u!114 &4114950261924663097
 MonoBehaviour:
   m_ObjectHideFlags: 3

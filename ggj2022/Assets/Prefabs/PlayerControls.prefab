@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31b42797703c4747a9a42ca567df2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Players: []
+  Players:
+  - {fileID: 0}
   moveVal: {x: 0, y: 0}
   moveSpeed: 1
 --- !u!114 &4193906454083449575

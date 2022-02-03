@@ -13,8 +13,8 @@ public class MenuSystem : MonoBehaviour {
     public bool DebugAdvance = false;
     public int DebugSelectOption = -1;
 
-    public bool IsInMenu => CurrentConversation != null || IsInTitleMenu;
-    public bool WantsInput => IsInMenu || IsInCredits;
+    public bool IsInMenu => CurrentConversation != null || IsInTitleMenu || ResolutionDialogComponent.enabled;
+    public bool WantsInput => IsInMenu || IsInCredits || ResolutionDialogComponent.enabled;
     
     public bool IsInTitleMenu;
     public bool IsInCredits;
@@ -24,6 +24,10 @@ public class MenuSystem : MonoBehaviour {
     public GUIStyle Style;
     public GameObject ConversationCanvasPrefab;
     public ConversationUI ConversationUI;
+
+    public Behaviour ResolutionDialogComponent;
+
+    private Vector2 _oldMainAxis = Vector2.zero;
 
     public static MenuSystem Instance;
 
@@ -131,6 +135,7 @@ public class MenuSystem : MonoBehaviour {
         CurrentPath = nextPath;
         CurrentEntry = CurrentPath.Entries.FirstOrDefault();
         ShowEntryOptions = CurrentPath.Entries.Count <= 1 && CurrentPath.Options?.Count > 0;
+        _oldMainAxis = Vector2.zero;
     }
 
     private void AdvanceConversation() {
@@ -145,6 +150,7 @@ public class MenuSystem : MonoBehaviour {
         }
         CurrentEntry = CurrentPath.Entries[nextIndex];
         ShowEntryOptions = nextIndex >= CurrentPath.Entries.Count - 1 && CurrentPath.Options?.Count > 0;
+        _oldMainAxis = Vector2.zero;
         HighlightedOption = 0;
     }
 
@@ -168,29 +174,41 @@ public class MenuSystem : MonoBehaviour {
     }
 
     public void ProcessInput(Vector2? mainAxis = null, bool? accept = null, bool? cancel = null) {
-        if (ShowEntryOptions) {
-            if (mainAxis != null) {
-                int selectDelta = Mathf.RoundToInt(-mainAxis.Value.y + mainAxis.Value.x);
-                int optionCount = CurrentPath?.Options?.Count ?? 1;
-                HighlightedOption = ((HighlightedOption + selectDelta) + optionCount) % optionCount;
-            }
-        }
-        if (accept == true) {
-            if (IsInTitleMenu || IsInCredits) {
-                GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
-                FindObjectOfType<StoryStateManager>().AddState("next");
-            } else {
-                if (ShowEntryOptions) {
-                    DoSelectOption(HighlightedOption);
-                } else {
-                    AdvanceConversation();
+        if (!ResolutionDialogComponent.enabled) {
+            if (ShowEntryOptions) {
+                if (mainAxis != null) {
+                    Vector2Int mainAxisInt = Vector2RoundToInt(mainAxis.Value);
+                    Vector2Int mainAxisDelta = mainAxisInt - Vector2RoundToInt(_oldMainAxis);
+                    int selectDelta = mainAxisInt == Vector2Int.zero ? 0 : -mainAxisDelta.y + mainAxisDelta.x;
+                    int optionCount = CurrentPath?.Options?.Count ?? 1;
+                    HighlightedOption = ((HighlightedOption + selectDelta) + optionCount) % optionCount;
+                    _oldMainAxis = mainAxis.Value;
                 }
             }
-        } else if (cancel == true){ 
-            if (IsInTitleMenu || IsInCredits) {
-                Application.Quit();
+            if (accept == true) {
+                if (IsInTitleMenu || IsInCredits) {
+                    GameObject.Find("TitleMenuCloseAudio").GetComponent<AudioSource>().Play();
+                    FindObjectOfType<StoryStateManager>().AddState("next");
+                } else {
+                    if (ShowEntryOptions) {
+                        DoSelectOption(HighlightedOption);
+                    } else {
+                        AdvanceConversation();
+                    }
+                }
             }
         }
+        if (accept != true && cancel == true) { 
+            OpenResolutionDialog();
+        }
+    }
+
+    public void OpenResolutionDialog() {
+        ResolutionDialogComponent.enabled = !ResolutionDialogComponent.enabled;
+    }
+
+    private Vector2Int Vector2RoundToInt(Vector2 vec) {
+        return new Vector2Int(Mathf.RoundToInt(vec.x), Mathf.RoundToInt(vec.y));
     }
 
     // protected void OnGUI() {
