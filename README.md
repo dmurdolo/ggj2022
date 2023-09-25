@@ -2,14 +2,13 @@
 
 Theme: Duality
 
-## TECH
+## Technology
 
-* 
+- https://unity.com/
 
-## BUGS
+## Software
 
-* 
-
-## TO DO
-
-* 
+- https://unity.com/
+- https://www.blender.org/
+- https://code.visualstudio.com/
+- https://www.adobe.com/uk/products/photoshop.html
